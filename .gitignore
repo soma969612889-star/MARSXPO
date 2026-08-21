@@ -1,0 +1,64 @@
+# Keep this repository focused on the portfolio website source.
+*
+!.gitignore
+!作品集网页/
+!作品集网页/**
+
+# Large media and production exports should live in OSS/CDN, not Git history.
+作品选集/
+导出/
+NiuBao打包/
+01品牌宣传片/
+02形象片故事片/
+03专题片/
+04展会快剪/
+05展厅展项/
+06展示方案漫游/
+h/
+互动软件/
+其他外接/
+动画/
+动画制作/
+雕塑/
+
+# Heavy media, project, archive, and cache formats.
+*.mp4
+*.mov
+*.m4v
+*.avi
+*.mkv
+*.wmv
+*.flv
+*.webm
+*.mp3
+*.wav
+*.aac
+*.flac
+*.aep
+*.prproj
+*.psd
+*.ai
+*.zip
+*.rar
+*.7z
+*.cfa
+*.pek
+
+# Local preview and generated files.
+作品集网页/*.log
+作品集网页/.server.pid
+node_modules/
+dist/
+build/
+.cache/
+.tmp/
+tmp/
+
+# OS and editor noise.
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+.vscode/
+.idea/
