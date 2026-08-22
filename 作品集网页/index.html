@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mars鹏作品集 | 影像 动画 展陈</title>
+    <meta
+      name="description"
+      content="影像、动画、展厅展项、空间漫游与三维视觉作品集。"
+    />
+    <link rel="canonical" href="https://www.marsxpo.com/" />
+    <meta property="og:title" content="Mars鹏作品集" />
+    <meta
+      property="og:description"
+      content="影像、动画、展厅展项、空间漫游与三维视觉作品集。"
+    />
+    <meta property="og:url" content="https://www.marsxpo.com/" />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="回到顶部">
+        <span class="brand-mark">M</span>
+        <span>Mars鹏作品集</span>
+      </a>
+      <nav class="nav-links" aria-label="页面导航">
+        <a href="#featured">精选</a>
+        <a href="#categories">分类</a>
+        <a href="#works">全部作品</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <video id="heroVideo" class="hero-video" muted autoplay loop playsinline></video>
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Visual Portfolio</p>
+          <h1 id="hero-title">Mars鹏作品集</h1>
+          <p class="hero-copy">
+            从企业宣传片、展会快剪到三维动画、展厅展项与空间漫游，按作品类型重新梳理成一页可浏览、可播放的作品展示。
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#works">浏览作品</a>
+            <a class="button button-quiet" href="#featured">精选项目</a>
+          </div>
+          <dl class="metrics" id="metrics"></dl>
+        </div>
+        <aside class="hero-rail" id="heroRail" aria-label="精选作品"></aside>
+      </section>
+
+      <section class="section featured-section" id="featured" aria-labelledby="featured-title">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Featured</p>
+            <h2 id="featured-title">精选项目</h2>
+          </div>
+          <p>
+            用几组代表作品先建立整体印象，再进入完整分类查看。
+          </p>
+        </div>
+        <div class="featured-grid" id="featuredGrid"></div>
+      </section>
+
+      <section class="section category-section" id="categories" aria-labelledby="category-title">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Categories</p>
+            <h2 id="category-title">作品分类</h2>
+          </div>
+          <p>
+            以实际交付类型组织：剪辑包装、动画、展实拍、漫游、建模与早期作品。
+          </p>
+        </div>
+        <div class="category-strip" id="categoryStrip"></div>
+      </section>
+
+      <section class="section works-section" id="works" aria-labelledby="works-title">
+        <div class="section-head section-head-stacked">
+          <div>
+            <p class="eyebrow">Archive</p>
+            <h2 id="works-title">全部作品</h2>
+          </div>
+          <label class="search-box">
+            <span>搜索</span>
+            <input id="searchInput" type="search" placeholder="输入片名、类别或关键词" autocomplete="off" />
+          </label>
+        </div>
+
+        <div class="filter-bar" id="filterBar" role="tablist" aria-label="作品分类筛选"></div>
+        <div class="work-grid" id="workGrid"></div>
+        <p class="empty-state" id="emptyState" hidden>没有找到匹配作品。</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Mars鹏作品集</span>
+      <a href="https://www.marsxpo.com/">www.marsxpo.com</a>
+    </footer>
+
+    <div class="modal" id="previewModal" aria-hidden="true">
+      <div class="modal-backdrop" data-close></div>
+      <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-topbar">
+          <div>
+            <p class="modal-category" id="modalCategory"></p>
+            <h3 id="modalTitle"></h3>
+          </div>
+          <button class="icon-button" type="button" id="closeModal" aria-label="关闭预览">×</button>
+        </div>
+        <div class="modal-media" id="modalMedia"></div>
+        <div class="modal-footer">
+          <button class="button button-quiet" type="button" id="prevWork">上一件</button>
+          <p id="modalMeta"></p>
+          <button class="button button-quiet" type="button" id="nextWork">下一件</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      window.MARS_ASSET_BASE_URL = "";
+    </script>
+    <script src="./script.js" defer></script>
+  </body>
+</html>
