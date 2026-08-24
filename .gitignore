@@ -1,6 +1,9 @@
 # Keep this repository focused on the portfolio website source.
 *
 !.gitignore
+!.github/
+!.github/workflows/
+!.github/workflows/**
 !作品集网页/
 !作品集网页/**
 
