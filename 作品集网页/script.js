@@ -192,7 +192,8 @@ const uiCopy = {
     },
     works: {
       eyebrow: "Archive",
-      title: "Project Archive",
+      title: "按分类浏览",
+      copy: "按作品类别分组浏览，保留项目气质，弱化素材文件名与版本痕迹。",
       searchLabel: "Search",
       searchPlaceholder: "输入片名、类别或关键词",
       filterAria: "作品分类筛选",
@@ -317,7 +318,8 @@ const uiCopy = {
     },
     works: {
       eyebrow: "Archive",
-      title: "Project Archive",
+      title: "Works by Category",
+      copy: "Browse the portfolio by production field, with clean project titles instead of source-file names.",
       searchLabel: "Search",
       searchPlaceholder: "Search title, category or keyword",
       filterAria: "Work category filters",
@@ -1040,6 +1042,136 @@ const rawWorks = [
 ];
 
 const workCopy = {
+  zh: {
+    "clip-pv-2024": {
+      title: "宝钢光伏展影像",
+      note: "展会传播视频与现场节奏剪辑"
+    },
+    "clip-innovate-magang": {
+      title: "创新马钢专题片",
+      note: "企业专题叙事与字幕包装"
+    },
+    "clip-train": {
+      title: "铁路工业影像",
+      note: "交通与工业场景叙事"
+    },
+    "clip-annual-chain": {
+      title: "链金年度大事记",
+      note: "年度事件梳理与纪实包装"
+    },
+    "clip-chain-v5": {
+      title: "链金品牌片",
+      note: "企业品牌影像与视觉包装"
+    },
+    "ani-210411": {
+      title: "动画短片",
+      note: "角色与场景动画成片"
+    },
+    "ani-xintegang": {
+      title: "新特钢沙盘展示",
+      note: "沙盘展示视频与三维合成"
+    },
+    "ani-niubao": {
+      title: "牛小宝亮相动画",
+      note: "IP角色出场动画与字幕包装"
+    },
+    "ani-car-body": {
+      title: "白车身机械臂动画",
+      note: "工业制造流程动画"
+    },
+    "ani-car-0417": {
+      title: "车辆动画片段",
+      note: "车辆主题动画表达"
+    },
+    "ani-scroll": {
+      title: "长卷视觉叙事",
+      note: "长卷式视觉叙事"
+    },
+    "show-media1": {
+      title: "展厅现场影像",
+      note: "展厅现场影像记录"
+    },
+    "show-oylj-party": {
+      title: "欧冶链金展陈记录",
+      note: "展陈内容现场记录"
+    },
+    "show-magang-tour": {
+      title: "马钢展示馆漫游",
+      note: "展示馆项目影像片段"
+    },
+    "roam-shanghai-auto": {
+      title: "宝钢上海车展漫游",
+      note: "展台方案漫游与音乐包装"
+    },
+    "roam-manufacturing": {
+      title: "制造业大会展陈漫游",
+      note: "大会展陈方案预演"
+    },
+    "roam-industry-3d": {
+      title: "工博会裸眼3D漫游",
+      note: "裸眼3D视觉与音乐包装"
+    },
+    "roam-quzhou-school": {
+      title: "衢州中学校园漫游",
+      note: "校园空间方案漫游"
+    },
+    "roam-chenzhi": {
+      title: "辰致科技车展提案",
+      note: "投标方案视频与展台预览"
+    },
+    "roam-tonggu": {
+      title: "铜鼓生态研学提案",
+      note: "研学空间提案漫游"
+    },
+    "model-blindbox-01": {
+      title: "角色盲盒概念 A",
+      note: "角色与盲盒风格概念图"
+    },
+    "model-blindbox-02": {
+      title: "角色盲盒概念 B",
+      note: "角色与盲盒风格概念图"
+    },
+    "model-visual-01": {
+      title: "三维视觉概念",
+      note: "三维画面与氛围视觉"
+    },
+    "model-concept-01": {
+      title: "场景概念图 A",
+      note: "视觉概念与场景设计"
+    },
+    "model-concept-02": {
+      title: "场景概念图 B",
+      note: "视觉概念与场景设计"
+    },
+    "model-wechat-shot": {
+      title: "项目展示截图",
+      note: "项目过程与展示画面"
+    },
+    "model-sculpture-02": {
+      title: "雕塑造型研究 A",
+      note: "雕塑项目图像"
+    },
+    "model-sculpture-03": {
+      title: "雕塑造型研究 B",
+      note: "雕塑项目图像"
+    },
+    "model-sculpture": {
+      title: "雕塑造型研究 C",
+      note: "雕塑项目图像"
+    },
+    "student-01": {
+      title: "校园视觉练习 A",
+      note: "早期视觉作品"
+    },
+    "student-02": {
+      title: "校园视觉练习 B",
+      note: "早期视觉作品"
+    },
+    "student-03": {
+      title: "校园视觉练习 C",
+      note: "早期视觉作品"
+    }
+  },
   en: {
     "clip-oylj-2024": {
       title: "Ouyeel Chain Gold Promo Film",
@@ -1555,10 +1687,24 @@ function getCategorySummary(categoryOrId) {
   return getCategoryCopy(categoryOrId).summary;
 }
 
+function cleanDisplayTitle(title) {
+  const cleaned = title
+    .replace(/\b(?:demo|draft|final|version|cut)\b/gi, "")
+    .replace(/\bv\d+\b/gi, "")
+    .replace(/\b\d{4,14}[a-z]?\b/gi, "")
+    .replace(/^\d{2}(?=[\u4e00-\u9fa5])/g, "")
+    .replace(/最终字幕版|最终版|字幕版|播放文件|无水印|截选|带党建|有字幕|第[一二三四五六七八九十百]+稿|加音乐|剪辑合成/g, "")
+    .replace(/[_-]+/g, " ")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+  return cleaned || title;
+}
+
 function getWorkCopy(item) {
   const localized = workCopy[currentLanguage]?.[item.id] || {};
+  const baseTitle = localized.title || item.title;
   return {
-    title: localized.title || item.title,
+    title: cleanDisplayTitle(baseTitle),
     note: localized.note || item.note,
     tags: localized.tags || item.tags
   };
@@ -1566,10 +1712,13 @@ function getWorkCopy(item) {
 
 function getSearchText(item) {
   const category = getCategory(item);
+  const zhCopy = workCopy.zh?.[item.id] || {};
   const enCopy = workCopy.en?.[item.id] || {};
   return [
     item.title,
     item.note,
+    zhCopy.title,
+    zhCopy.note,
     item.category,
     category.copy.zh.label,
     category.copy.zh.summary,
@@ -1863,8 +2012,51 @@ function renderWorks() {
     return getSearchText(item).toLowerCase().includes(normalizedSearch);
   });
 
-  dom.workGrid.replaceChildren(...currentList.map((item) => createCard(item, "work")));
+  const categoryGroups = categoryInfo
+    .map((category) => ({
+      category,
+      items: currentList.filter((item) => item.category === category.id)
+    }))
+    .filter((group) => group.items.length > 0);
+
+  dom.workGrid.replaceChildren(...categoryGroups.map((group) => createWorkGroup(group.category, group.items)));
   dom.emptyState.hidden = currentList.length > 0;
+}
+
+function createWorkGroup(category, items) {
+  const group = document.createElement("section");
+  group.className = "work-group";
+  group.style.setProperty("--accent", category.color);
+
+  const head = document.createElement("div");
+  head.className = "work-group-head";
+
+  const copy = document.createElement("div");
+  const kicker = document.createElement("p");
+  kicker.className = "work-group-kicker";
+  const categoryIndex = categoryInfo.findIndex((item) => item.id === category.id) + 1;
+  kicker.textContent = `${String(categoryIndex).padStart(2, "0")} / ${currentLanguage === "en" ? "Category" : "分类"}`;
+
+  const title = document.createElement("h3");
+  title.textContent = getCategoryLabel(category);
+
+  const summary = document.createElement("p");
+  summary.textContent = getCategorySummary(category);
+
+  copy.append(kicker, title, summary);
+
+  const count = document.createElement("span");
+  count.className = "work-group-count";
+  count.textContent = currentLanguage === "en" ? `${items.length} works` : `${items.length} 件作品`;
+
+  head.append(copy, count);
+
+  const grid = document.createElement("div");
+  grid.className = "work-grid";
+  grid.replaceChildren(...items.map((item) => createCard(item, "work")));
+
+  group.append(head, grid);
+  return group;
 }
 
 function openModal(id) {
