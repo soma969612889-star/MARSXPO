@@ -773,7 +773,7 @@ h3 {
 }
 
 .category-tile {
-  min-height: 230px;
+  min-height: 174px;
   padding: 18px;
   color: var(--ink);
   background: var(--paper);
@@ -785,18 +785,9 @@ h3 {
 }
 
 .category-tile h3 {
-  min-height: 48px;
-  margin-bottom: 28px;
+  min-height: 42px;
+  margin-bottom: 18px;
   font-size: 1.02rem;
-}
-
-.category-tile strong {
-  display: block;
-  margin-bottom: 16px;
-  color: var(--accent);
-  font-size: 3.3rem;
-  line-height: 1;
-  font-weight: 950;
 }
 
 .category-tile p {
@@ -1246,7 +1237,7 @@ h3 {
   }
 
   .category-tile {
-    min-height: 180px;
+    min-height: 150px;
   }
 
   .work-card {

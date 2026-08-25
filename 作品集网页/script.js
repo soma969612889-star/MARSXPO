@@ -1957,7 +1957,6 @@ function renderFeatured() {
 function renderCategories() {
   dom.categoryStrip.replaceChildren(
     ...categoryInfo.map((category) => {
-      const count = works.filter((item) => item.category === category.id).length;
       const button = document.createElement("button");
       button.type = "button";
       button.className = "category-tile";
@@ -1965,12 +1964,10 @@ function renderCategories() {
 
       const title = document.createElement("h3");
       title.textContent = getCategoryLabel(category);
-      const number = document.createElement("strong");
-      number.textContent = count;
       const summary = document.createElement("p");
       summary.textContent = getCategorySummary(category);
 
-      button.append(title, number, summary);
+      button.append(title, summary);
       button.addEventListener("click", () => {
         activeCategory = category.id;
         renderFilters();
