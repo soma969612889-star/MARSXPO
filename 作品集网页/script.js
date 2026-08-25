@@ -1594,13 +1594,13 @@ const works = rawWorks.map((item) => ({
   ext: getExtension(item.src)
 }));
 
-const heroWorkId = "ani-niubao";
+const heroWorkId = "show-baosteel-silicon-hall";
 
 const featuredIds = [
   heroWorkId,
   "clip-oylj-2024",
   "roam-shanghai-auto",
-  "show-baosteel-silicon-hall",
+  "ani-niubao",
   "model-sculpture"
 ];
 
