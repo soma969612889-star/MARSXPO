@@ -28,6 +28,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 92px;
 }
 
 body {
@@ -368,6 +369,7 @@ h3 {
 }
 
 .section {
+  scroll-margin-top: 92px;
   padding: 92px clamp(18px, 5vw, 68px);
   border-bottom: 1px solid var(--line);
 }
@@ -397,6 +399,197 @@ h3 {
   gap: 14px;
   max-width: 1360px;
   margin: 0 auto;
+}
+
+.profile-section {
+  background:
+    linear-gradient(180deg, rgba(255, 75, 47, 0.08), transparent 340px),
+    #101112;
+}
+
+.profile-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: end;
+  max-width: 1360px;
+  margin: 0 auto 44px;
+}
+
+.profile-intro h2 {
+  display: grid;
+  gap: 4px;
+  max-width: 850px;
+  overflow-wrap: normal;
+  word-break: keep-all;
+}
+
+.profile-lead {
+  max-width: 820px;
+  margin-top: 26px;
+  color: var(--soft);
+  font-size: 1.08rem;
+  line-height: 1.9;
+}
+
+.profile-tags,
+.tool-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.profile-tags {
+  margin-top: 30px;
+}
+
+.profile-tags span,
+.tool-cloud span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 7px 10px;
+  color: var(--soft);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.resume-stats {
+  display: grid;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.resume-stats article {
+  min-height: 150px;
+  padding: 18px;
+  background: #0b0c0d;
+}
+
+.resume-stats span,
+.board-label,
+.timeline-list time,
+.capability-list span,
+.resume-note span {
+  display: block;
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.resume-stats strong {
+  display: block;
+  margin-top: 18px;
+  color: var(--ink);
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: 950;
+}
+
+.resume-stats p {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.75;
+}
+
+.resume-board {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr) minmax(260px, 0.75fr);
+  gap: 1px;
+  max-width: 1360px;
+  margin: 0 auto;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.resume-column {
+  min-width: 0;
+  padding: 22px;
+  background: var(--paper);
+}
+
+.board-label {
+  margin-bottom: 24px;
+  color: var(--muted);
+}
+
+.timeline-list {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline-list li {
+  padding: 0 0 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.timeline-list li + li {
+  padding-top: 24px;
+}
+
+.timeline-list li:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.timeline-list h3,
+.capability-list h3,
+.resume-note h3 {
+  margin-top: 10px;
+}
+
+.timeline-list p,
+.capability-list p,
+.resume-note p,
+.resume-footnote {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.capability-list {
+  display: grid;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.capability-list article {
+  min-height: 160px;
+  padding: 18px;
+  background: #101112;
+}
+
+.resume-side {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.resume-note {
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--line);
+}
+
+.tool-cloud span {
+  color: var(--ink);
+  background: rgba(243, 240, 232, 0.05);
+}
+
+.resume-footnote {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
 }
 
 .feature-card,
@@ -832,9 +1025,18 @@ h3 {
   .work-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .profile-layout,
+  .resume-board {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 760px) {
+  html {
+    scroll-padding-top: 132px;
+  }
+
   .site-header {
     align-items: flex-start;
     flex-direction: column;
@@ -848,6 +1050,7 @@ h3 {
 
   .nav-links a {
     padding-inline: 8px;
+    font-size: 0.72rem;
   }
 
   .hero {
@@ -888,6 +1091,7 @@ h3 {
   }
 
   .section {
+    scroll-margin-top: 132px;
     padding-block: 62px;
   }
 
@@ -895,6 +1099,18 @@ h3 {
   .section-head-stacked {
     grid-template-columns: 1fr;
     gap: 18px;
+  }
+
+  .profile-layout {
+    margin-bottom: 28px;
+  }
+
+  .resume-column {
+    padding: 18px;
+  }
+
+  .resume-stats strong {
+    font-size: 1.65rem;
   }
 
   .featured-grid {
