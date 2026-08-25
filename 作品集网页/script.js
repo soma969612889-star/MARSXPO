@@ -125,13 +125,13 @@ const uiCopy = {
       eyebrow: "Profile / Resume",
       titleLine1: "从创意概念，",
       titleLine2: "到成片交付。",
-      lead: "马鹏，数字视觉内容制作与展陈影像负责人。熟悉视频策划、拍摄剪辑、AE视觉包装、三维资产、IP形象与AIGC辅助创作，持有 CAAC 无人机执照并有 6 年航拍经验，能够从前期方案、中期制作到后期维护推进项目落地。",
+      lead: "马鹏，数字视觉内容制作与展陈影像负责人。熟悉视频策划、拍摄剪辑、AE视觉包装、三维资产、IP形象与AIGC辅助创作，统筹展厅交互软件制作并参与主创，持有 CAAC 无人机执照并有 6 年航拍经验，能够从前期方案、中期制作到后期维护推进项目落地。",
       tagsAria: "核心能力",
       statsAria: "履历亮点",
       stat1: {
         kicker: "2020 - 至今",
         title: "数字部主管",
-        copy: "统筹展厅数字内容、企业宣传片、空间漫游与上屏视频制作。"
+        copy: "统筹展厅数字内容、交互软件制作、企业宣传片、空间漫游与上屏视频制作，并参与核心创意。"
       },
       stat2: {
         kicker: "20+ / Year",
@@ -158,9 +158,9 @@ const uiCopy = {
       exp1: {
         time: "2020.04 - 至今",
         title: "上海意通展览展示有限公司 / 数字部主管",
-        copy: "负责方案阶段影像表现、预算与排期，统筹脚本、拍摄剪辑、AE 包装、三维内容、客户沟通及展厅数字内容维护。",
+        copy: "负责方案阶段影像表现、预算与排期，统筹脚本、拍摄剪辑、AE 包装、三维内容、展厅交互软件制作、客户沟通及展厅数字内容维护，并参与核心内容主创。",
         software: "After Effects / Premiere Pro / Maya / C4D / Blender / D5 / Photoshop / Illustrator / Midjourney / Stable Diffusion / ChatGPT",
-        output: "企业宣传片、专题片、故事片、展厅上屏视频、裸眼 3D 大屏动画、空间漫游、IP 形象、3D 表情包与 3D 打印模型。"
+        output: "企业宣传片、专题片、故事片、展厅上屏视频、展厅交互软件、裸眼 3D 大屏动画、空间漫游、IP 形象、3D 表情包与 3D 打印模型。"
       },
       exp2: {
         time: "2018.06 - 2019.09",
@@ -181,8 +181,8 @@ const uiCopy = {
         copy: "脚本梳理、拍摄落地、剪辑节奏、字幕包装、多版本输出。"
       },
       cap2: {
-        title: "展陈与上屏内容",
-        copy: "展厅媒体、裸眼3D大屏、空间漫游、互动展示内容制作。"
+        title: "展陈与交互软件",
+        copy: "展厅媒体、裸眼3D大屏、空间漫游、互动展示与展厅交互软件制作；负责统筹安排，并参与主创。"
       },
       cap3: {
         title: "三维视觉与IP",
@@ -284,13 +284,13 @@ const uiCopy = {
       eyebrow: "Profile / Resume",
       titleLine1: "From first idea,",
       titleLine2: "to final delivery.",
-      lead: "Mars Peng is a digital visual content and exhibition media lead. His work spans video planning, shooting, editing, AE motion packaging, 3D assets, IP visuals and AIGC-assisted ideation. He also holds a CAAC drone license, brings six years of aerial filming experience, and moves projects from proposal to production and long-term maintenance.",
+      lead: "Mars Peng is a digital visual content and exhibition media lead. His work spans video planning, shooting, editing, AE motion packaging, 3D assets, IP visuals and AIGC-assisted ideation. He coordinates exhibition interactive software production as a key creative contributor, holds a CAAC drone license, brings six years of aerial filming experience, and moves projects from proposal to production and long-term maintenance.",
       tagsAria: "Core capabilities",
       statsAria: "Resume highlights",
       stat1: {
         kicker: "2020 - Now",
         title: "Digital Dept. Lead",
-        copy: "Leading exhibition media, corporate films, spatial walkthroughs and screen content production."
+        copy: "Leading exhibition media, interactive software production, corporate films, spatial walkthroughs and screen content, with hands-on creative direction."
       },
       stat2: {
         kicker: "20+ / Year",
@@ -317,9 +317,9 @@ const uiCopy = {
       exp1: {
         time: "2020.04 - Now",
         title: "Shanghai Yitong Exhibition Display / Digital Dept. Lead",
-        copy: "Responsible for proposal-stage visual storytelling, budgets and schedules, while coordinating scripts, shoots, edits, AE motion packaging, 3D content, client communication and exhibition media maintenance.",
+        copy: "Responsible for proposal-stage visual storytelling, budgets and schedules, while coordinating scripts, shoots, edits, AE motion packaging, 3D content, exhibition interactive software production, client communication and exhibition media maintenance as a key creative contributor.",
         software: "After Effects / Premiere Pro / Maya / C4D / Blender / D5 / Photoshop / Illustrator / Midjourney / Stable Diffusion / ChatGPT",
-        output: "Corporate films, documentaries, story films, exhibition screen content, glasses-free 3D screen animation, spatial walkthroughs, IP visuals, 3D sticker sets and 3D-print models."
+        output: "Corporate films, documentaries, story films, exhibition screen content, exhibition interactive software, glasses-free 3D screen animation, spatial walkthroughs, IP visuals, 3D sticker sets and 3D-print models."
       },
       exp2: {
         time: "2018.06 - 2019.09",
@@ -340,8 +340,8 @@ const uiCopy = {
         copy: "Script structure, shoot execution, pacing, subtitles, motion packaging and multi-version delivery."
       },
       cap2: {
-        title: "Exhibition Media",
-        copy: "Showroom media, glasses-free 3D screens, spatial walkthroughs and interactive display content."
+        title: "Exhibition Interactive Media",
+        copy: "Showroom media, glasses-free 3D screens, spatial walkthroughs, interactive displays and exhibition interactive software production, coordinated by Mars with key creative input."
       },
       cap3: {
         title: "3D Visuals & IP",
