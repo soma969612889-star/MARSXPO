@@ -512,7 +512,10 @@ h3 {
 .resume-stats span,
 .board-label,
 .timeline-list time,
+.timeline-details dt,
 .capability-list span,
+.resume-contact > span,
+.contact-list dt,
 .resume-note span {
   display: block;
   color: var(--accent);
@@ -582,18 +585,51 @@ h3 {
 
 .timeline-list h3,
 .capability-list h3,
+.resume-contact h3,
 .resume-note h3 {
   margin-top: 10px;
 }
 
 .timeline-list p,
+.timeline-details dd,
 .capability-list p,
+.contact-list dd,
 .resume-note p,
 .resume-footnote {
   margin-top: 10px;
   color: var(--muted);
   font-size: 0.9rem;
   line-height: 1.8;
+}
+
+.timeline-details,
+.contact-list {
+  display: grid;
+  gap: 10px;
+  margin: 16px 0 0;
+  padding: 14px;
+  background: rgba(243, 240, 232, 0.04);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.timeline-details div,
+.contact-list div {
+  min-width: 0;
+}
+
+.timeline-details dt,
+.contact-list dt {
+  color: var(--soft);
+  font-size: 0.66rem;
+}
+
+.timeline-details dd,
+.contact-list dd {
+  margin: 5px 0 0;
+  color: var(--ink);
+  font-size: 0.82rem;
+  line-height: 1.65;
 }
 
 .capability-list {
@@ -615,9 +651,25 @@ h3 {
   gap: 24px;
 }
 
+.resume-contact,
 .resume-note {
   padding-bottom: 22px;
   border-bottom: 1px solid var(--line);
+}
+
+.contact-list {
+  padding: 0;
+  background: transparent;
+  border: 0;
+}
+
+.contact-list a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.contact-list a:hover {
+  color: var(--accent);
 }
 
 .tool-cloud span {

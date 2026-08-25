@@ -147,21 +147,29 @@ const uiCopy = {
     resume: {
       experienceLabel: "Experience",
       capabilityLabel: "Capabilities",
-      educationLabel: "Education / Tools",
+      educationLabel: "联系方式 / 学历 / 工具",
+      softwareLabel: "使用软件",
+      outputLabel: "产出类型",
       exp1: {
         time: "2020.04 - 至今",
         title: "上海意通展览展示有限公司 / 数字部主管",
-        copy: "负责方案阶段影像表现、预算与排期，统筹拍摄剪辑、特效包装、三维内容、客户沟通及展厅数字内容维护。"
+        copy: "负责方案阶段影像表现、预算与排期，统筹脚本、拍摄剪辑、AE 包装、三维内容、客户沟通及展厅数字内容维护。",
+        software: "After Effects / Premiere Pro / Maya / C4D / Blender / D5 / Photoshop / Illustrator / Midjourney / Stable Diffusion / ChatGPT",
+        output: "企业宣传片、专题片、故事片、展厅上屏视频、裸眼 3D 大屏动画、空间漫游、IP 形象、3D 表情包与 3D 打印模型。"
       },
       exp2: {
         time: "2018.06 - 2019.09",
         title: "电子科技大学文化艺术教育中心 / CMI 项目组长",
-        copy: "负责新媒体交互创作、团队协作与现场技术支持，项目涵盖投影、互动装置与发布会现场视觉。"
+        copy: "负责新媒体交互创作、创意构思、美术方向、团队协作与现场技术支持，项目涵盖投影、互动装置与发布会现场视觉。",
+        software: "After Effects / Premiere Pro / Maya / Photoshop / Illustrator / 投影与互动设备调试",
+        output: "新媒体交互作品、投影作品、互动装置、发布会现场视觉、节目录制技术支持与分享材料。"
       },
       exp3: {
         time: "2017.04 - 2018.06",
         title: "成都意空间美术设计有限公司 / 设计制作",
-        copy: "参与三维建模、视频动画与竞标表现，并完成活动视觉与现场物料设计。"
+        copy: "参与三维建模、视频动画与竞标表现，并完成活动视觉、论坛物料与现场布展设计。",
+        software: "Maya / After Effects / Premiere Pro / Photoshop / Illustrator / SketchUp / 3ds Max",
+        output: "三维模型、视频动画、竞标方案表现、VI 设计、论坛物料、条幅道旗与年会布展视觉。"
       },
       cap1: {
         title: "视频后期与成片",
@@ -179,11 +187,18 @@ const uiCopy = {
         title: "AIGC 工作流",
         copy: "使用 Midjourney、Stable Diffusion、ChatGPT 辅助概念、脚本、分镜与视觉探索。"
       },
-      educationTime: "2018 / Bachelor",
-      educationTitle: "电子科技大学成都学院",
-      educationCopy: "影视技术（动画）本科。校园阶段参与校庆视觉、新媒体交互与 AR 作品创作。",
+      contactLabel: "Contact",
+      contactTitle: "联系方式",
+      contactAria: "联系方式",
+      contactPhoneLabel: "电话",
+      contactEmailLabel: "邮箱",
+      contactLocationLabel: "城市",
+      contactLocation: "成都 / 可配合项目出差",
+      educationTime: "2014 - 2018 / 本科",
+      educationTitle: "电子科技大学成都学院 / 影视技术（动画）",
+      educationCopy: "2018 年毕业。校园阶段参与校庆视觉、新媒体交互、AR 作品与三维动画创作，获得四川省大学生艺术展演大赛三等奖、校二等奖学金等。",
       toolsAria: "软件与工具",
-      footnote: "完整简历与联系方式可按需提供。"
+      footnote: "更多项目细节与 PDF 版简历可按需提供。"
     },
     categories: {
       eyebrow: "Categories",
@@ -273,21 +288,29 @@ const uiCopy = {
     resume: {
       experienceLabel: "Experience",
       capabilityLabel: "Capabilities",
-      educationLabel: "Education / Tools",
+      educationLabel: "Contact / Education / Tools",
+      softwareLabel: "Software",
+      outputLabel: "Output",
       exp1: {
         time: "2020.04 - Now",
         title: "Shanghai Yitong Exhibition Display / Digital Dept. Lead",
-        copy: "Responsible for proposal-stage visual storytelling, budgets and schedules, while coordinating shoots, editing, motion packaging, 3D content, client communication and exhibition media maintenance."
+        copy: "Responsible for proposal-stage visual storytelling, budgets and schedules, while coordinating scripts, shoots, edits, AE motion packaging, 3D content, client communication and exhibition media maintenance.",
+        software: "After Effects / Premiere Pro / Maya / C4D / Blender / D5 / Photoshop / Illustrator / Midjourney / Stable Diffusion / ChatGPT",
+        output: "Corporate films, documentaries, story films, exhibition screen content, glasses-free 3D screen animation, spatial walkthroughs, IP visuals, 3D sticker sets and 3D-print models."
       },
       exp2: {
         time: "2018.06 - 2019.09",
         title: "UESTC Culture & Art Education Center / CMI Project Lead",
-        copy: "Led new-media interaction projects, team coordination and on-site technical support for projection, interactive installations and launch-event visuals."
+        copy: "Led new-media interaction projects across ideation, art direction, team coordination and on-site technical support for projection, interactive installations and launch-event visuals.",
+        software: "After Effects / Premiere Pro / Maya / Photoshop / Illustrator / projection and interactive hardware setup",
+        output: "New-media interactive works, projection pieces, interactive installations, launch-event visuals, recording support and presentation materials."
       },
       exp3: {
         time: "2017.04 - 2018.06",
         title: "Chengdu Yikongjian Art Design / Design Production",
-        copy: "Contributed to 3D modeling, video animation and bidding visuals, with additional event identity and installation material design."
+        copy: "Contributed to 3D modeling, video animation and bidding visuals, with additional event identity, forum material and on-site installation design.",
+        software: "Maya / After Effects / Premiere Pro / Photoshop / Illustrator / SketchUp / 3ds Max",
+        output: "3D models, video animation, bidding visuals, VI design, forum materials, banners, flags and annual-meeting installation visuals."
       },
       cap1: {
         title: "Editing & Finishing",
@@ -305,11 +328,18 @@ const uiCopy = {
         title: "AIGC Workflow",
         copy: "Using Midjourney, Stable Diffusion and ChatGPT for concept exploration, scripts, storyboards and visual direction."
       },
-      educationTime: "2018 / Bachelor",
-      educationTitle: "Chengdu College of UESTC",
-      educationCopy: "B.A. in Film & Television Technology (Animation), with campus work in anniversary visuals, new-media interaction and AR projects.",
+      contactLabel: "Contact",
+      contactTitle: "Contact",
+      contactAria: "Contact details",
+      contactPhoneLabel: "Phone",
+      contactEmailLabel: "Email",
+      contactLocationLabel: "Location",
+      contactLocation: "Chengdu / Available for project travel",
+      educationTime: "2014 - 2018 / Bachelor's Degree",
+      educationTitle: "Chengdu College of UESTC / Film & Television Technology (Animation)",
+      educationCopy: "Graduated in 2018. Campus work covered anniversary visuals, new-media interaction, AR pieces and 3D animation, with recognition including a Sichuan college art showcase prize and a university scholarship.",
       toolsAria: "Software and tools",
-      footnote: "Full resume and contact details are available on request."
+      footnote: "More project details and the PDF resume are available on request."
     },
     categories: {
       eyebrow: "Categories",
