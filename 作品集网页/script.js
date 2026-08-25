@@ -416,7 +416,7 @@ const rawWorks = [
     id: "clip-oylj-2024",
     title: "欧冶链金宣传片",
     category: "剪辑包装",
-    src: "../作品选集/剪辑包装/241010欧冶链金宣传片.mp4",
+    src: "../作品选集_预览/剪辑包装/241010欧冶链金宣传片.mp4",
     note: "企业品牌影像与工业视觉包装",
     tags: ["宣传片", "企业", "工业"]
   },
@@ -424,7 +424,7 @@ const rawWorks = [
     id: "clip-pv-2024",
     title: "24光伏展宝钢",
     category: "剪辑包装",
-    src: "../作品选集/剪辑包装/24光伏展宝钢0617M.mp4",
+    src: "../作品选集_预览/剪辑包装/24光伏展宝钢0617M.mp4",
     note: "展会传播视频与现场节奏剪辑",
     tags: ["展会", "快剪", "宝钢"]
   },
@@ -432,7 +432,7 @@ const rawWorks = [
     id: "clip-innovate-magang",
     title: "创新马钢最终字幕版",
     category: "剪辑包装",
-    src: "../作品选集/剪辑包装/创新马钢最终字幕版.mp4",
+    src: "../作品选集_预览/剪辑包装/创新马钢最终字幕版.mp4",
     note: "专题片叙事与字幕成片",
     tags: ["专题片", "字幕", "马钢"]
   },
@@ -440,7 +440,7 @@ const rawWorks = [
     id: "clip-geothermal",
     title: "北京快剪地热宝钢展台",
     category: "剪辑包装",
-    src: "../作品选集/剪辑包装/北京快剪地热宝钢展台.mp4",
+    src: "../作品选集_预览/剪辑包装/北京快剪地热宝钢展台.mp4",
     note: "展台活动快剪",
     tags: ["展台", "快剪", "活动"]
   },
@@ -448,7 +448,7 @@ const rawWorks = [
     id: "clip-baodi",
     title: "宝地启园",
     category: "剪辑包装",
-    src: "../作品选集/剪辑包装/宝地启园0329.mp4",
+    src: "../作品选集_预览/剪辑包装/宝地启园0329.mp4",
     note: "园区项目影像包装",
     tags: ["园区", "项目", "包装"]
   },
@@ -456,7 +456,7 @@ const rawWorks = [
     id: "clip-smart-magang",
     title: "智慧马钢最终版",
     category: "剪辑包装",
-    src: "../作品选集/剪辑包装/智慧马钢最终版.mp4",
+    src: "../作品选集_预览/剪辑包装/智慧马钢最终版.mp4",
     note: "智慧制造专题成片",
     tags: ["智慧制造", "专题片", "马钢"]
   },
@@ -464,7 +464,7 @@ const rawWorks = [
     id: "clip-train",
     title: "火车铁轨有字幕",
     category: "剪辑包装",
-    src: "../作品选集/剪辑包装/火车铁轨有字幕.mp4",
+    src: "../作品选集_预览/剪辑包装/火车铁轨有字幕.mp4",
     note: "交通与工业场景叙事",
     tags: ["交通", "工业", "字幕"]
   },
@@ -472,7 +472,7 @@ const rawWorks = [
     id: "clip-annual-chain",
     title: "链金2023年度大事记",
     category: "剪辑包装",
-    src: "../作品选集/剪辑包装/链金2023年度大事记.mp4",
+    src: "../作品选集_预览/剪辑包装/链金2023年度大事记.mp4",
     note: "年度事件梳理与纪实包装",
     tags: ["年度", "大事记", "企业"]
   },
@@ -480,7 +480,7 @@ const rawWorks = [
     id: "clip-chain-v5",
     title: "链金第五稿",
     category: "剪辑包装",
-    src: "../作品选集/剪辑包装/链金第五稿_0103.mp4",
+    src: "../作品选集_预览/剪辑包装/链金第五稿_0103.mp4",
     note: "品牌片迭代版本",
     tags: ["品牌片", "版本", "链金"]
   },
@@ -488,7 +488,7 @@ const rawWorks = [
     id: "clip-leiyunshang",
     title: "雷允上年会宣传片",
     category: "剪辑包装",
-    src: "../作品选集/剪辑包装/雷允上年会宣传片无水印_2501010.mp4",
+    src: "../作品选集_预览/剪辑包装/雷允上年会宣传片无水印_2501010.mp4",
     note: "年会宣传与节庆氛围包装",
     tags: ["年会", "宣传片", "无水印"]
   },
@@ -496,7 +496,7 @@ const rawWorks = [
     id: "clip-magang-plan",
     title: "马钢十四五规划",
     category: "剪辑包装",
-    src: "../作品选集/剪辑包装/马钢十四五规划0809改.mp4",
+    src: "../作品选集_预览/剪辑包装/马钢十四五规划0809改.mp4",
     note: "规划专题片与企业叙事",
     tags: ["规划", "专题片", "马钢"]
   },
@@ -505,7 +505,7 @@ const rawWorks = [
     id: "ani-210411",
     title: "动画短片 210411",
     category: "动画",
-    src: "../作品选集/动画/2104112045530227.mp4",
+    src: "../作品选集_预览/动画/2104112045530227.mp4",
     note: "阶段性动画成片",
     tags: ["动画", "短片"]
   },
@@ -513,7 +513,7 @@ const rawWorks = [
     id: "ani-finance",
     title: "宝钢财务",
     category: "动画",
-    src: "../作品选集/动画/宝钢财务.mp4",
+    src: "../作品选集_预览/动画/宝钢财务.mp4",
     note: "企业服务动画表达",
     tags: ["企业", "动画", "宝钢"]
   },
@@ -521,7 +521,7 @@ const rawWorks = [
     id: "ani-xintegang",
     title: "新特钢沙盘剪辑合成",
     category: "动画",
-    src: "../作品选集/动画/新特钢沙盘剪辑合成1226.mp4",
+    src: "../作品选集_预览/动画/新特钢沙盘剪辑合成1226.mp4",
     note: "沙盘展示视频合成",
     tags: ["沙盘", "合成", "三维"]
   },
@@ -529,7 +529,7 @@ const rawWorks = [
     id: "ani-niubao",
     title: "牛小宝亮相片",
     category: "动画",
-    src: "../作品选集/动画/牛小宝亮相片1222字幕版.mp4",
+    src: "../作品选集_预览/动画/牛小宝亮相片1222字幕版.mp4",
     note: "IP角色出场动画与字幕包装",
     tags: ["IP", "角色", "字幕"]
   },
@@ -537,7 +537,7 @@ const rawWorks = [
     id: "ani-car-body",
     title: "白车身与机械臂",
     category: "动画",
-    src: "../作品选集/动画/白车身+机械臂播放文件+火花.mp4",
+    src: "../作品选集_预览/动画/白车身+机械臂播放文件+火花.mp4",
     note: "工业制造流程动画",
     tags: ["汽车", "机械臂", "工业"]
   },
@@ -545,7 +545,7 @@ const rawWorks = [
     id: "ani-luohe",
     title: "罗河小子表情包",
     category: "动画",
-    src: "../作品选集/动画/罗河小子表情包.mp4",
+    src: "../作品选集_预览/动画/罗河小子表情包.mp4",
     note: "角色表情与短动效",
     tags: ["角色", "表情包", "IP"]
   },
@@ -553,7 +553,7 @@ const rawWorks = [
     id: "ani-car-particle",
     title: "车身粒子",
     category: "动画",
-    src: "../作品选集/动画/车身粒子.mp4",
+    src: "../作品选集_预览/动画/车身粒子.mp4",
     note: "粒子视觉与车身动效",
     tags: ["粒子", "汽车", "视觉"]
   },
@@ -561,7 +561,7 @@ const rawWorks = [
     id: "ani-car-0417",
     title: "车车0417",
     category: "动画",
-    src: "../作品选集/动画/车车0417.mp4",
+    src: "../作品选集_预览/动画/车车0417.mp4",
     note: "车辆主题动画片段",
     tags: ["汽车", "动画"]
   },
@@ -569,7 +569,7 @@ const rawWorks = [
     id: "ani-scroll",
     title: "长卷0103",
     category: "动画",
-    src: "../作品选集/动画/长卷0103.mp4",
+    src: "../作品选集_预览/动画/长卷0103.mp4",
     note: "长卷式视觉叙事",
     tags: ["长卷", "动画", "叙事"]
   },
@@ -577,7 +577,7 @@ const rawWorks = [
     id: "ani-space",
     title: "飞机与太空舱",
     category: "动画",
-    src: "../作品选集/动画/飞机&太空舱.mov",
+    src: "../作品选集_预览/动画/飞机&太空舱.mp4",
     note: "飞行与空间主题动画",
     tags: ["飞机", "太空", "三维"]
   },
@@ -770,7 +770,7 @@ const rawWorks = [
     id: "show-media1",
     title: "媒体1",
     category: "展实拍",
-    src: "../作品选集/展实拍/媒体1.mp4",
+    src: "../作品选集_预览/展实拍/媒体1.mp4",
     note: "展厅现场影像记录",
     tags: ["实拍", "展厅"]
   },
@@ -778,7 +778,7 @@ const rawWorks = [
     id: "show-guanshan",
     title: "官山一镜到底",
     category: "展实拍",
-    src: "../作品选集/展实拍/官山 一镜到底.mp4",
+    src: "../作品选集_预览/展实拍/官山 一镜到底.mp4",
     note: "空间实拍与连续动线",
     tags: ["实拍", "一镜到底", "空间"]
   },
@@ -786,7 +786,7 @@ const rawWorks = [
     id: "show-auto-expo",
     title: "意通数字力量 燃动宝钢上海车展",
     category: "展实拍",
-    src: "../作品选集/展实拍/意通数字力量 燃动宝钢上海车展.mp4",
+    src: "../作品选集_预览/展实拍/意通数字力量 燃动宝钢上海车展.mp4",
     note: "车展现场实拍剪辑",
     tags: ["实拍", "车展", "宝钢"]
   },
@@ -794,7 +794,7 @@ const rawWorks = [
     id: "show-baosteel-silicon-hall",
     title: "宝钢硅钢展厅",
     category: "展实拍",
-    src: "../作品选集/展实拍/宝钢硅钢展厅.mp4",
+    src: "../作品选集_预览/展实拍/宝钢硅钢展厅.mp4",
     note: "宝钢硅钢展厅现场实拍与展陈影像",
     tags: ["实拍", "展厅", "宝钢", "硅钢"]
   },
@@ -802,7 +802,7 @@ const rawWorks = [
     id: "show-oylj-party",
     title: "欧冶链金 带党建",
     category: "展实拍",
-    src: "../作品选集/展实拍/欧冶链金_带党建.mp4",
+    src: "../作品选集_预览/展实拍/欧冶链金_带党建.mp4",
     note: "展陈内容现场记录",
     tags: ["实拍", "党建", "展陈"]
   },
@@ -810,7 +810,7 @@ const rawWorks = [
     id: "show-magang-tour",
     title: "马钢展示馆漫游截选",
     category: "展实拍",
-    src: "../作品选集/展实拍/马钢展示馆漫游截选.mp4",
+    src: "../作品选集_预览/展实拍/马钢展示馆漫游截选.mp4",
     note: "展示馆项目片段",
     tags: ["实拍", "展示馆", "马钢"]
   },
@@ -818,7 +818,7 @@ const rawWorks = [
     id: "show-magang-rd",
     title: "马钢研发中心科技展示馆",
     category: "展实拍",
-    src: "../作品选集/展实拍/马钢研发中心科技展示馆.mp4",
+    src: "../作品选集_预览/展实拍/马钢研发中心科技展示馆.mp4",
     note: "科技展示馆实拍成片",
     tags: ["实拍", "科技馆", "马钢"]
   },
@@ -827,7 +827,7 @@ const rawWorks = [
     id: "roam-guizhou",
     title: "贵州勘设股份漫游",
     category: "漫游",
-    src: "../作品选集/漫游/g_贵州勘设股份漫游解说合成1013B.mp4",
+    src: "../作品选集_预览/漫游/g_贵州勘设股份漫游解说合成1013B.mp4",
     note: "企业空间漫游与解说合成",
     tags: ["漫游", "空间", "解说"]
   },
@@ -835,7 +835,7 @@ const rawWorks = [
     id: "roam-shanghai-auto",
     title: "上海车展宝钢 DEMO",
     category: "漫游",
-    src: "../作品选集/漫游/上海车展宝钢DEMO0410_加音乐.mp4",
+    src: "../作品选集_预览/漫游/上海车展宝钢DEMO0410_加音乐.mp4",
     note: "展台方案漫游与音乐合成",
     tags: ["漫游", "车展", "宝钢"]
   },
@@ -843,7 +843,7 @@ const rawWorks = [
     id: "roam-cscec",
     title: "中建四局漫游",
     category: "漫游",
-    src: "../作品选集/漫游/中建四局漫游_1115.mp4",
+    src: "../作品选集_预览/漫游/中建四局漫游_1115.mp4",
     note: "建筑空间方案漫游",
     tags: ["漫游", "建筑"]
   },
@@ -851,7 +851,7 @@ const rawWorks = [
     id: "roam-manufacturing",
     title: "制造业大会",
     category: "漫游",
-    src: "../作品选集/漫游/制造业大会_0823_2.mp4",
+    src: "../作品选集_预览/漫游/制造业大会_0823_2.mp4",
     note: "大会展陈方案预演",
     tags: ["漫游", "展陈", "大会"]
   },
@@ -859,7 +859,7 @@ const rawWorks = [
     id: "roam-industry",
     title: "工博会",
     category: "漫游",
-    src: "../作品选集/漫游/工博会.mp4",
+    src: "../作品选集_预览/漫游/工博会.mp4",
     note: "展会空间演示",
     tags: ["漫游", "工博会"]
   },
@@ -867,7 +867,7 @@ const rawWorks = [
     id: "roam-industry-3d",
     title: "工博会裸眼3D音乐",
     category: "漫游",
-    src: "../作品选集/漫游/工博会裸眼3D音乐.mp4",
+    src: "../作品选集_预览/漫游/工博会裸眼3D音乐.mp4",
     note: "裸眼3D视觉与音乐包装",
     tags: ["漫游", "裸眼3D", "音乐"]
   },
@@ -875,7 +875,7 @@ const rawWorks = [
     id: "roam-quzhou-school",
     title: "衢州中学漫游",
     category: "漫游",
-    src: "../作品选集/漫游/衢州中学11 29.mp4",
+    src: "../作品选集_预览/漫游/衢州中学11 29.mp4",
     note: "校园空间方案漫游",
     tags: ["漫游", "校园"]
   },
@@ -883,7 +883,7 @@ const rawWorks = [
     id: "roam-chenzhi",
     title: "辰致科技上海车展投标视频",
     category: "漫游",
-    src: "../作品选集/漫游/辰致科技上海车展投标视频_0307.mp4",
+    src: "../作品选集_预览/漫游/辰致科技上海车展投标视频_0307.mp4",
     note: "投标方案视频与展台预览",
     tags: ["漫游", "投标", "车展"]
   },
@@ -891,7 +891,7 @@ const rawWorks = [
     id: "roam-tonggu",
     title: "铜鼓生态研学提案视频",
     category: "漫游",
-    src: "../作品选集/漫游/铜鼓生态研学提案视频_0727.mp4",
+    src: "../作品选集_预览/漫游/铜鼓生态研学提案视频_0727.mp4",
     note: "研学空间提案漫游",
     tags: ["漫游", "生态", "研学"]
   },
@@ -916,7 +916,7 @@ const rawWorks = [
     id: "model-fountain",
     title: "来自世界的风喷泉彩虹",
     category: "建模",
-    src: "../作品选集/建模/5.1、来自世界的风喷泉彩虹06.08.mp4",
+    src: "../作品选集_预览/建模/5.1、来自世界的风喷泉彩虹06.08.mp4",
     note: "公共艺术与空间视觉视频",
     tags: ["建模", "公共艺术", "视频"]
   },
@@ -1864,6 +1864,13 @@ function hydrateVideo(video) {
   video.load();
 }
 
+function applyVideoGuards(video) {
+  video.controlsList = "nodownload noplaybackrate";
+  video.disablePictureInPicture = true;
+  video.setAttribute("oncontextmenu", "return false");
+  video.addEventListener("contextmenu", (event) => event.preventDefault());
+}
+
 function observeVideo(video) {
   if (previewObserver) {
     previewObserver.observe(video);
@@ -1888,6 +1895,7 @@ function createMediaShell(item) {
     video.loop = true;
     video.playsInline = true;
     video.preload = "metadata";
+    applyVideoGuards(video);
     video.dataset.src = assetUrl(item.src);
     video.addEventListener("loadeddata", () => {
       placeholder.style.opacity = "0";
@@ -2164,6 +2172,7 @@ function createModalMedia(item) {
     video.controls = true;
     video.autoplay = true;
     video.playsInline = true;
+    applyVideoGuards(video);
     video.src = assetUrl(item.src);
     video.addEventListener("error", () => {
       dom.modalMedia.replaceChildren(errorBox(t("errors.video")));
