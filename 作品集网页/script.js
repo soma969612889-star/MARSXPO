@@ -125,7 +125,7 @@ const uiCopy = {
       eyebrow: "Profile / Resume",
       titleLine1: "从创意概念，",
       titleLine2: "到成片交付。",
-      lead: "马鹏，数字视觉内容制作与展陈影像负责人。熟悉视频策划、拍摄剪辑、AE视觉包装、三维资产、IP形象与AIGC辅助创作，能够从前期方案、中期制作到后期维护推进项目落地。",
+      lead: "马鹏，数字视觉内容制作与展陈影像负责人。熟悉视频策划、拍摄剪辑、AE视觉包装、三维资产、IP形象与AIGC辅助创作，持有 CAAC 无人机执照并有 6 年航拍经验，能够从前期方案、中期制作到后期维护推进项目落地。",
       tagsAria: "核心能力",
       statsAria: "履历亮点",
       stat1: {
@@ -142,6 +142,11 @@ const uiCopy = {
         kicker: "Awards",
         title: "国际设计奖项",
         copy: "参与主创项目获得 London Design Awards、IDA、GPDP 等设计奖项。"
+      },
+      stat4: {
+        kicker: "CAAC / 6 Years",
+        title: "无人机航拍",
+        copy: "持有 CAAC 无人机执照，具备 6 年航拍经验，可支持空间、建筑与项目现场影像采集。"
       }
     },
     resume: {
@@ -186,6 +191,14 @@ const uiCopy = {
       cap4: {
         title: "AIGC 工作流",
         copy: "使用 Midjourney、Stable Diffusion、ChatGPT 辅助概念、脚本、分镜与视觉探索。"
+      },
+      cap5: {
+        title: "无人机航拍",
+        copy: "持有 CAAC 无人机执照，6 年航拍经验，可配合项目完成空间、建筑、展陈与城市现场影像采集。"
+      },
+      cap6: {
+        title: "AI 建模 + 3D 打印",
+        copy: "3D 打印爱好者，实践 AI 建模、模型修整、切片验证与 3D 打印落地流程。"
       },
       contactLabel: "Contact",
       contactTitle: "联系方式",
@@ -266,7 +279,7 @@ const uiCopy = {
       eyebrow: "Profile / Resume",
       titleLine1: "From first idea,",
       titleLine2: "to final delivery.",
-      lead: "Mars Peng is a digital visual content and exhibition media lead. His work spans video planning, shooting, editing, AE motion packaging, 3D assets, IP visuals and AIGC-assisted ideation, moving projects from proposal to production and long-term maintenance.",
+      lead: "Mars Peng is a digital visual content and exhibition media lead. His work spans video planning, shooting, editing, AE motion packaging, 3D assets, IP visuals and AIGC-assisted ideation. He also holds a CAAC drone license, brings six years of aerial filming experience, and moves projects from proposal to production and long-term maintenance.",
       tagsAria: "Core capabilities",
       statsAria: "Resume highlights",
       stat1: {
@@ -283,6 +296,11 @@ const uiCopy = {
         kicker: "Awards",
         title: "Design Recognition",
         copy: "Key creative projects have received recognition from London Design Awards, IDA and GPDP."
+      },
+      stat4: {
+        kicker: "CAAC / 6 Years",
+        title: "Aerial Filming",
+        copy: "CAAC drone license holder with six years of aerial filming experience for spaces, architecture and project-site documentation."
       }
     },
     resume: {
@@ -327,6 +345,14 @@ const uiCopy = {
       cap4: {
         title: "AIGC Workflow",
         copy: "Using Midjourney, Stable Diffusion and ChatGPT for concept exploration, scripts, storyboards and visual direction."
+      },
+      cap5: {
+        title: "Drone Aerial Filming",
+        copy: "CAAC drone license holder with six years of aerial filming experience for spaces, architecture, exhibitions and urban project footage."
+      },
+      cap6: {
+        title: "AI Modeling + 3D Print",
+        copy: "3D-printing enthusiast practicing AI modeling, model cleanup, slicing checks and the full workflow from digital form to printed object."
       },
       contactLabel: "Contact",
       contactTitle: "Contact",
