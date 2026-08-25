@@ -781,6 +781,14 @@ const rawWorks = [
     tags: ["实拍", "车展", "宝钢"]
   },
   {
+    id: "show-baosteel-silicon-hall",
+    title: "宝钢硅钢展厅",
+    category: "展实拍",
+    src: "../作品选集/展实拍/宝钢硅钢展厅.mp4",
+    note: "宝钢硅钢展厅现场实拍与展陈影像",
+    tags: ["实拍", "展厅", "宝钢", "硅钢"]
+  },
+  {
     id: "show-oylj-party",
     title: "欧冶链金 带党建",
     category: "展实拍",
@@ -1417,6 +1425,10 @@ const workCopy = {
       title: "Yitong Digital Power at Auto Shanghai",
       note: "On-site auto show footage and edit."
     },
+    "show-baosteel-silicon-hall": {
+      title: "Baosteel Silicon Steel Exhibition Hall",
+      note: "On-site exhibition footage for the Baosteel Silicon Steel Hall."
+    },
     "show-oylj-party": {
       title: "Ouyeel Chain Gold Exhibition Record",
       note: "On-site record of exhibition and party-building content."
@@ -1588,7 +1600,7 @@ const featuredIds = [
   heroWorkId,
   "clip-oylj-2024",
   "roam-shanghai-auto",
-  "show-magang-rd",
+  "show-baosteel-silicon-hall",
   "model-sculpture"
 ];
 
