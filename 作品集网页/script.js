@@ -209,7 +209,7 @@ const uiCopy = {
       contactLocation: "成都 / 可配合项目出差",
       educationTime: "2014 - 2018 / 本科",
       educationTitle: "电子科技大学成都学院 / 影视技术（动画）",
-      educationCopy: "2018 年毕业。校园阶段参与校庆视觉、新媒体交互、AR 作品与三维动画创作，获得四川省大学生艺术展演大赛三等奖、校二等奖学金等。",
+      educationCopy: "2018 年毕业。校园阶段参与电子科技大学本部 60 周年校庆视觉、新媒体交互、AR 作品与三维动画创作，获得四川省大学生艺术展演大赛三等奖、校二等奖学金等。",
       toolsAria: "软件与工具",
       footnote: "更多项目细节与 PDF 版简历可按需提供。"
     },
@@ -363,7 +363,7 @@ const uiCopy = {
       contactLocation: "Chengdu / Available for project travel",
       educationTime: "2014 - 2018 / Bachelor's Degree",
       educationTitle: "Chengdu College of UESTC / Film & Television Technology (Animation)",
-      educationCopy: "Graduated in 2018. Campus work covered anniversary visuals, new-media interaction, AR pieces and 3D animation, with recognition including a Sichuan college art showcase prize and a university scholarship.",
+      educationCopy: "Graduated in 2018. Campus work covered the UESTC main campus 60th anniversary visuals, new-media interaction, AR pieces and 3D animation, with recognition including a Sichuan college art showcase prize and a university scholarship.",
       toolsAria: "Software and tools",
       footnote: "More project details and the PDF resume are available on request."
     },
