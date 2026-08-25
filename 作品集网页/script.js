@@ -210,6 +210,11 @@ const uiCopy = {
       educationTime: "2014 - 2018 / 本科",
       educationTitle: "电子科技大学成都学院 / 影视技术（动画）",
       educationCopy: "2018 年毕业。校园阶段参与电子科技大学本部 60 周年校庆视觉、新媒体交互、AR 作品与三维动画创作，获得四川省大学生艺术展演大赛三等奖、校二等奖学金等。",
+      caseLabel: "Case Archive",
+      caseTitle: "UP Team CMI 案例展示",
+      caseCopy: "大学时期参与电子科技大学大学生文化艺术教育中心 UP Team CMI 团队，部分新媒体交互与舞台视觉案例收录于团队公众号。",
+      caseScan: "扫码查看早期案例",
+      caseQrAlt: "UP Team CMI 微信公众号二维码",
       toolsAria: "软件与工具",
       footnote: "更多项目细节与 PDF 版简历可按需提供。"
     },
@@ -364,6 +369,11 @@ const uiCopy = {
       educationTime: "2014 - 2018 / Bachelor's Degree",
       educationTitle: "Chengdu College of UESTC / Film & Television Technology (Animation)",
       educationCopy: "Graduated in 2018. Campus work covered the UESTC main campus 60th anniversary visuals, new-media interaction, AR pieces and 3D animation, with recognition including a Sichuan college art showcase prize and a university scholarship.",
+      caseLabel: "Case Archive",
+      caseTitle: "UP Team CMI Case Archive",
+      caseCopy: "During university, Mars joined the UP Team CMI group at the UESTC Student Culture & Art Education Center. Selected new-media interaction and stage-visual cases are archived on the team's WeChat account.",
+      caseScan: "Scan to view early cases",
+      caseQrAlt: "UP Team CMI WeChat QR code",
       toolsAria: "Software and tools",
       footnote: "More project details and the PDF resume are available on request."
     },
@@ -1719,6 +1729,9 @@ function applyStaticCopy() {
   });
   document.querySelectorAll("[data-i18n-aria-label]").forEach((node) => {
     node.setAttribute("aria-label", t(node.dataset.i18nAriaLabel));
+  });
+  document.querySelectorAll("[data-i18n-alt]").forEach((node) => {
+    node.setAttribute("alt", t(node.dataset.i18nAlt));
   });
 
   dom.langButtons.forEach((button) => {

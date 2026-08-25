@@ -515,6 +515,7 @@ h3 {
 .timeline-details dt,
 .capability-list span,
 .resume-contact > span,
+.case-copy > span,
 .contact-list dt,
 .resume-note span {
   display: block;
@@ -586,6 +587,7 @@ h3 {
 .timeline-list h3,
 .capability-list h3,
 .resume-contact h3,
+.case-copy h3,
 .resume-note h3 {
   margin-top: 10px;
 }
@@ -593,6 +595,7 @@ h3 {
 .timeline-list p,
 .timeline-details dd,
 .capability-list p,
+.case-copy p,
 .contact-list dd,
 .resume-note p,
 .resume-footnote {
@@ -652,9 +655,36 @@ h3 {
 }
 
 .resume-contact,
+.resume-case,
 .resume-note {
   padding-bottom: 22px;
   border-bottom: 1px solid var(--line);
+}
+
+.resume-case {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 128px;
+  gap: 16px;
+  align-items: center;
+}
+
+.case-copy p {
+  font-size: 0.84rem;
+}
+
+.case-scan {
+  color: var(--accent) !important;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.case-qr {
+  width: 128px;
+  aspect-ratio: 1;
+  padding: 8px;
+  background: #f8f5ef;
+  border: 1px solid rgba(243, 240, 232, 0.28);
+  border-radius: 6px;
 }
 
 .contact-list {
@@ -1274,6 +1304,14 @@ h3 {
 
   .resume-column {
     padding: 18px;
+  }
+
+  .resume-case {
+    grid-template-columns: 1fr;
+  }
+
+  .case-qr {
+    width: 150px;
   }
 
   .resume-stats strong {
