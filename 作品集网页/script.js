@@ -1526,9 +1526,11 @@ const works = rawWorks.map((item) => ({
   ext: getExtension(item.src)
 }));
 
+const heroWorkId = "ani-niubao";
+
 const featuredIds = [
+  heroWorkId,
   "clip-oylj-2024",
-  "ani-niubao",
   "roam-shanghai-auto",
   "show-magang-rd",
   "model-sculpture"
@@ -1909,14 +1911,15 @@ function metricNode(label, value) {
 }
 
 function renderHero() {
-  const hero = works.find((item) => item.id === "clip-oylj-2024") || works[0];
+  const hero = works.find((item) => item.id === heroWorkId) || works[0];
   dom.heroVideo.src = assetUrl(hero.src);
   dom.heroVideo.play().catch(() => {});
 
   const railItems = featuredIds
     .map((id) => works.find((item) => item.id === id))
     .filter(Boolean)
-    .slice(1, 4);
+    .filter((item) => item.id !== hero.id)
+    .slice(0, 3);
 
   dom.heroRail.replaceChildren(
     ...railItems.map((item) => {
