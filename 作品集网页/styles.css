@@ -84,6 +84,7 @@ p {
   z-index: 40;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 24px;
   min-height: 72px;
@@ -136,6 +137,37 @@ p {
 .nav-links a:hover {
   color: var(--ink);
   border-color: var(--line);
+}
+
+.language-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 1px;
+  padding: 3px;
+  background: rgba(243, 240, 232, 0.04);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
+
+.language-switch button {
+  min-width: 38px;
+  min-height: 32px;
+  padding: 7px 10px;
+  color: var(--muted);
+  background: transparent;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.language-switch button:hover,
+.language-switch button.is-active {
+  color: #090909;
+  background: var(--ink);
 }
 
 .hero {
@@ -846,7 +878,7 @@ h3 {
 }
 
 .work-card {
-  min-height: 300px;
+  min-height: 0;
   aspect-ratio: 16 / 11;
 }
 
@@ -1051,6 +1083,15 @@ h3 {
   .nav-links a {
     padding-inline: 8px;
     font-size: 0.72rem;
+  }
+
+  .language-switch {
+    align-self: stretch;
+    justify-content: center;
+  }
+
+  .language-switch button {
+    flex: 1 1 0;
   }
 
   .hero {

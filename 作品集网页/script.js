@@ -2,37 +2,345 @@ const categoryInfo = [
   {
     id: "剪辑包装",
     color: "#c84d3f",
-    summary: "企业宣传片、专题片、展会快剪与片头包装。"
+    copy: {
+      zh: {
+        label: "剪辑包装",
+        summary: "企业宣传片、专题片、展会快剪与片头包装。"
+      },
+      en: {
+        label: "Editing / Packaging",
+        summary: "Corporate films, documentaries, expo edits and motion packages."
+      }
+    }
   },
   {
     id: "动画",
     color: "#19745d",
-    summary: "三维动画、MG动效、IP角色与工业流程演示。"
+    copy: {
+      zh: {
+        label: "动画",
+        summary: "三维动画、MG动效、IP角色与工业流程演示。"
+      },
+      en: {
+        label: "Animation",
+        summary: "3D animation, motion graphics, IP characters and industrial process films."
+      }
+    }
   },
   {
     id: "展实拍",
     color: "#2f6ea6",
-    summary: "展厅展项落地拍摄、现场记录与项目实拍。"
+    copy: {
+      zh: {
+        label: "展实拍",
+        summary: "展厅展项落地拍摄、现场记录与项目实拍。"
+      },
+      en: {
+        label: "Exhibition Footage",
+        summary: "On-site exhibition shoots, project records and installation documentation."
+      }
+    }
   },
   {
     id: "漫游",
     color: "#b8851e",
-    summary: "展厅、展台、园区与空间方案漫游。"
+    copy: {
+      zh: {
+        label: "漫游",
+        summary: "展厅、展台、园区与空间方案漫游。"
+      },
+      en: {
+        label: "Spatial Walkthrough",
+        summary: "Walkthrough films for showrooms, booths, campuses and spatial proposals."
+      }
+    }
   },
   {
     id: "建模",
     color: "#7b6b3e",
-    summary: "三维建模、雕塑、概念图与材质渲染。"
+    copy: {
+      zh: {
+        label: "建模",
+        summary: "三维建模、雕塑、概念图与材质渲染。"
+      },
+      en: {
+        label: "3D / Modeling",
+        summary: "3D modeling, sculpture studies, concept images and material rendering."
+      }
+    }
   },
   {
     id: "学生时期",
     color: "#7256a2",
-    summary: "早期视觉训练与阶段性创作。"
+    copy: {
+      zh: {
+        label: "学生时期",
+        summary: "早期视觉训练与阶段性创作。"
+      },
+      en: {
+        label: "Student Works",
+        summary: "Early visual studies and formative creative experiments."
+      }
+    }
   }
 ];
 
 const siteConfig = {
-  assetBaseUrl: (window.MARS_ASSET_BASE_URL || "").replace(/\/$/, "")
+  assetBaseUrl: (window.MARS_ASSET_BASE_URL || "").replace(/\/$/, ""),
+  languageStorageKey: "marsxpo-language"
+};
+
+const uiCopy = {
+  zh: {
+    htmlLang: "zh-CN",
+    meta: {
+      title: "Mars鹏作品集 | Motion Portfolio",
+      description: "影像、动画、展厅展项、空间漫游与三维视觉作品集。"
+    },
+    brand: { aria: "回到顶部" },
+    nav: {
+      aria: "页面导航",
+      works: "作品",
+      resume: "简历",
+      skills: "能力",
+      archive: "归档"
+    },
+    language: { aria: "语言切换" },
+    hero: {
+      eyebrow: "Motion Design / Film / Exhibition",
+      titleName: "Mars鹏",
+      titlePortfolio: "作品集",
+      copy: "从品牌影像、三维动画到展厅数字内容，把复杂项目做成可观看、可理解、能落地的视觉叙事。",
+      actionWorks: "查看作品",
+      actionResume: "查看简历",
+      actionArchive: "全部归档",
+      railAria: "精选作品"
+    },
+    featured: {
+      eyebrow: "Featured",
+      title: "Selected Motion Work",
+      copy: "先用代表项目建立气质：企业叙事、IP动画、展台空间与科技展示。"
+    },
+    profile: {
+      eyebrow: "Profile / Resume",
+      titleLine1: "从创意概念，",
+      titleLine2: "到成片交付。",
+      lead: "马鹏，数字视觉内容制作与展陈影像负责人。熟悉视频策划、拍摄剪辑、AE视觉包装、三维资产、IP形象与AIGC辅助创作，能够从前期方案、中期制作到后期维护推进项目落地。",
+      tagsAria: "核心能力",
+      statsAria: "履历亮点",
+      stat1: {
+        kicker: "2020 - 至今",
+        title: "数字部主管",
+        copy: "统筹展厅数字内容、企业宣传片、空间漫游与上屏视频制作。"
+      },
+      stat2: {
+        kicker: "20+ / Year",
+        title: "项目交付",
+        copy: "每年完成二十余个大小项目，覆盖大型展厅、临展与品牌影像。"
+      },
+      stat3: {
+        kicker: "Awards",
+        title: "国际设计奖项",
+        copy: "参与主创项目获得 London Design Awards、IDA、GPDP 等设计奖项。"
+      }
+    },
+    resume: {
+      experienceLabel: "Experience",
+      capabilityLabel: "Capabilities",
+      educationLabel: "Education / Tools",
+      exp1: {
+        time: "2020.04 - 至今",
+        title: "上海意通展览展示有限公司 / 数字部主管",
+        copy: "负责方案阶段影像表现、预算与排期，统筹拍摄剪辑、特效包装、三维内容、客户沟通及展厅数字内容维护。"
+      },
+      exp2: {
+        time: "2018.06 - 2019.09",
+        title: "电子科技大学文化艺术教育中心 / CMI 项目组长",
+        copy: "负责新媒体交互创作、团队协作与现场技术支持，项目涵盖投影、互动装置与发布会现场视觉。"
+      },
+      exp3: {
+        time: "2017.04 - 2018.06",
+        title: "成都意空间美术设计有限公司 / 设计制作",
+        copy: "参与三维建模、视频动画与竞标表现，并完成活动视觉与现场物料设计。"
+      },
+      cap1: {
+        title: "视频后期与成片",
+        copy: "脚本梳理、拍摄落地、剪辑节奏、字幕包装、多版本输出。"
+      },
+      cap2: {
+        title: "展陈与上屏内容",
+        copy: "展厅媒体、裸眼3D大屏、空间漫游、互动展示内容制作。"
+      },
+      cap3: {
+        title: "三维视觉与IP",
+        copy: "三维建模、角色形象、简单绑定、3D打印与动效资产。"
+      },
+      cap4: {
+        title: "AIGC 工作流",
+        copy: "使用 Midjourney、Stable Diffusion、ChatGPT 辅助概念、脚本、分镜与视觉探索。"
+      },
+      educationTime: "2018 / Bachelor",
+      educationTitle: "电子科技大学成都学院",
+      educationCopy: "影视技术（动画）本科。校园阶段参与校庆视觉、新媒体交互与 AR 作品创作。",
+      toolsAria: "软件与工具",
+      footnote: "完整简历与联系方式可按需提供。"
+    },
+    categories: {
+      eyebrow: "Categories",
+      title: "Creative Fields",
+      copy: "按真实交付方式整理，从短片剪辑到三维视觉，从现场展陈到空间漫游。"
+    },
+    works: {
+      eyebrow: "Archive",
+      title: "Project Archive",
+      searchLabel: "Search",
+      searchPlaceholder: "输入片名、类别或关键词",
+      filterAria: "作品分类筛选",
+      empty: "没有找到匹配作品。"
+    },
+    footer: { label: "Mars XPO / Motion Portfolio" },
+    modal: {
+      closeAria: "关闭预览",
+      prev: "上一件",
+      next: "下一件"
+    },
+    metrics: {
+      works: "作品",
+      videos: "视频",
+      images: "图像/GIF",
+      categories: "分类"
+    },
+    filters: { all: "全部" },
+    errors: {
+      video: "视频暂时无法加载。",
+      image: "图片暂时无法加载。"
+    }
+  },
+  en: {
+    htmlLang: "en",
+    meta: {
+      title: "Mars Peng Portfolio | Motion Design",
+      description: "A portfolio of film, animation, exhibition media, spatial walkthroughs and 3D visual work."
+    },
+    brand: { aria: "Back to top" },
+    nav: {
+      aria: "Page navigation",
+      works: "Works",
+      resume: "Resume",
+      skills: "Skills",
+      archive: "Archive"
+    },
+    language: { aria: "Language switcher" },
+    hero: {
+      eyebrow: "Motion Design / Film / Exhibition",
+      titleName: "Mars Peng",
+      titlePortfolio: "Portfolio",
+      copy: "From brand films and 3D animation to exhibition media, I turn complex projects into visual stories that are watchable, legible and production-ready.",
+      actionWorks: "View Works",
+      actionResume: "View Resume",
+      actionArchive: "Full Archive",
+      railAria: "Featured works"
+    },
+    featured: {
+      eyebrow: "Featured",
+      title: "Selected Motion Work",
+      copy: "A first read of the portfolio through brand narratives, IP animation, exhibition spaces and technology showcases."
+    },
+    profile: {
+      eyebrow: "Profile / Resume",
+      titleLine1: "From first idea,",
+      titleLine2: "to final delivery.",
+      lead: "Mars Peng is a digital visual content and exhibition media lead. His work spans video planning, shooting, editing, AE motion packaging, 3D assets, IP visuals and AIGC-assisted ideation, moving projects from proposal to production and long-term maintenance.",
+      tagsAria: "Core capabilities",
+      statsAria: "Resume highlights",
+      stat1: {
+        kicker: "2020 - Now",
+        title: "Digital Dept. Lead",
+        copy: "Leading exhibition media, corporate films, spatial walkthroughs and screen content production."
+      },
+      stat2: {
+        kicker: "20+ / Year",
+        title: "Projects Delivered",
+        copy: "Delivering over twenty projects a year across major showrooms, temporary exhibitions and brand films."
+      },
+      stat3: {
+        kicker: "Awards",
+        title: "Design Recognition",
+        copy: "Key creative projects have received recognition from London Design Awards, IDA and GPDP."
+      }
+    },
+    resume: {
+      experienceLabel: "Experience",
+      capabilityLabel: "Capabilities",
+      educationLabel: "Education / Tools",
+      exp1: {
+        time: "2020.04 - Now",
+        title: "Shanghai Yitong Exhibition Display / Digital Dept. Lead",
+        copy: "Responsible for proposal-stage visual storytelling, budgets and schedules, while coordinating shoots, editing, motion packaging, 3D content, client communication and exhibition media maintenance."
+      },
+      exp2: {
+        time: "2018.06 - 2019.09",
+        title: "UESTC Culture & Art Education Center / CMI Project Lead",
+        copy: "Led new-media interaction projects, team coordination and on-site technical support for projection, interactive installations and launch-event visuals."
+      },
+      exp3: {
+        time: "2017.04 - 2018.06",
+        title: "Chengdu Yikongjian Art Design / Design Production",
+        copy: "Contributed to 3D modeling, video animation and bidding visuals, with additional event identity and installation material design."
+      },
+      cap1: {
+        title: "Editing & Finishing",
+        copy: "Script structure, shoot execution, pacing, subtitles, motion packaging and multi-version delivery."
+      },
+      cap2: {
+        title: "Exhibition Media",
+        copy: "Showroom media, glasses-free 3D screens, spatial walkthroughs and interactive display content."
+      },
+      cap3: {
+        title: "3D Visuals & IP",
+        copy: "3D modeling, character visuals, basic rigging, 3D printing and motion-ready assets."
+      },
+      cap4: {
+        title: "AIGC Workflow",
+        copy: "Using Midjourney, Stable Diffusion and ChatGPT for concept exploration, scripts, storyboards and visual direction."
+      },
+      educationTime: "2018 / Bachelor",
+      educationTitle: "Chengdu College of UESTC",
+      educationCopy: "B.A. in Film & Television Technology (Animation), with campus work in anniversary visuals, new-media interaction and AR projects.",
+      toolsAria: "Software and tools",
+      footnote: "Full resume and contact details are available on request."
+    },
+    categories: {
+      eyebrow: "Categories",
+      title: "Creative Fields",
+      copy: "Organized by real production routes, from edits and 3D visuals to on-site exhibition footage and spatial walkthroughs."
+    },
+    works: {
+      eyebrow: "Archive",
+      title: "Project Archive",
+      searchLabel: "Search",
+      searchPlaceholder: "Search title, category or keyword",
+      filterAria: "Work category filters",
+      empty: "No matching works found."
+    },
+    footer: { label: "Mars XPO / Motion Portfolio" },
+    modal: {
+      closeAria: "Close preview",
+      prev: "Previous",
+      next: "Next"
+    },
+    metrics: {
+      works: "Works",
+      videos: "Videos",
+      images: "Images/GIF",
+      categories: "Fields"
+    },
+    filters: { all: "All" },
+    errors: {
+      video: "This video is temporarily unavailable.",
+      image: "This image is temporarily unavailable."
+    }
+  }
 };
 
 const rawWorks = [
@@ -731,6 +1039,355 @@ const rawWorks = [
   }
 ];
 
+const workCopy = {
+  en: {
+    "clip-oylj-2024": {
+      title: "Ouyeel Chain Gold Promo Film",
+      note: "Corporate brand film with industrial visual packaging."
+    },
+    "clip-pv-2024": {
+      title: "Baosteel PV Expo Film",
+      note: "Expo communication video with event-paced editing."
+    },
+    "clip-innovate-magang": {
+      title: "Innovating MaSteel Documentary",
+      note: "Documentary storytelling with subtitle-ready finishing."
+    },
+    "clip-geothermal": {
+      title: "Baosteel Geothermal Booth Quick Edit",
+      note: "Fast-paced edit for booth activity and event moments."
+    },
+    "clip-baodi": {
+      title: "Baodi Qiyuan Park Film",
+      note: "Project film packaging for a campus and park narrative."
+    },
+    "clip-smart-magang": {
+      title: "Smart MaSteel Documentary",
+      note: "Finished documentary focused on smart manufacturing."
+    },
+    "clip-train": {
+      title: "Railway Industrial Film",
+      note: "Traffic and industrial scene storytelling with subtitles."
+    },
+    "clip-annual-chain": {
+      title: "Chain Gold 2023 Year in Review",
+      note: "Annual milestone film with documentary-style packaging."
+    },
+    "clip-chain-v5": {
+      title: "Chain Gold Brand Film V5",
+      note: "Iterated version of a corporate brand film."
+    },
+    "clip-leiyunshang": {
+      title: "Leiyunshang Annual Meeting Promo",
+      note: "Festive annual-meeting promotion and event atmosphere."
+    },
+    "clip-magang-plan": {
+      title: "MaSteel 14th Five-Year Plan",
+      note: "Planning documentary with corporate narrative structure."
+    },
+    "ani-210411": {
+      title: "Animation Short 210411",
+      note: "A staged animation short and production milestone."
+    },
+    "ani-finance": {
+      title: "Baosteel Finance",
+      note: "Animated communication for corporate service content."
+    },
+    "ani-xintegang": {
+      title: "Special Steel Sand Table Composite",
+      note: "Composite video for a digital sand-table presentation."
+    },
+    "ani-niubao": {
+      title: "Niuxiaobao Reveal Film",
+      note: "IP character reveal animation with subtitle packaging."
+    },
+    "ani-car-body": {
+      title: "Body-in-White and Robotic Arm",
+      note: "Industrial manufacturing process animation."
+    },
+    "ani-luohe": {
+      title: "Luohe Kid Expression Pack",
+      note: "Character expression and short-form motion design."
+    },
+    "ani-car-particle": {
+      title: "Car Body Particles",
+      note: "Particle-based vehicle visual and body motion study."
+    },
+    "ani-car-0417": {
+      title: "Car Animation 0417",
+      note: "Vehicle-themed animation segment."
+    },
+    "ani-scroll": {
+      title: "Long Scroll 0103",
+      note: "Visual storytelling using a long-scroll composition."
+    },
+    "ani-space": {
+      title: "Aircraft & Space Capsule",
+      note: "Flight and space-themed animation sequence."
+    },
+    "gif-application": {
+      title: "Integrated Application",
+      note: "Animated product application visual."
+    },
+    "gif-solution": {
+      title: "Solution Motion Graphic",
+      note: "Visual explanation for a solution framework."
+    },
+    "gif-bin-meta": {
+      title: "B-in Meta",
+      note: "Motion concept for a platform idea."
+    },
+    "gif-delivery": {
+      title: "Precision Delivery",
+      note: "Animated service-process visualization."
+    },
+    "gif-vave": {
+      title: "VAVE",
+      note: "Animated value-engineering communication."
+    },
+    "gif-new-car": {
+      title: "New Car Launch",
+      note: "Motion graphic for a launch communication scenario."
+    },
+    "gif-recycle": {
+      title: "Circular Reuse",
+      note: "Low-carbon circularity themed motion visual."
+    },
+    "gif-buy-car": {
+      title: "Car Purchase Flow",
+      note: "Animated user journey and purchase process."
+    },
+    "gif-mobile": {
+      title: "Mobile Experience",
+      note: "Motion visual for a mobile experience."
+    },
+    "gif-exhibition": {
+      title: "Exhibition Motion Graphic",
+      note: "Animated visual for exhibition communication."
+    },
+    "gif-bcb": {
+      title: "BCB Lecture",
+      note: "Motion asset for a lecture and event scenario."
+    },
+    "gif-ctb": {
+      title: "CTB Battery Pack",
+      note: "Animated explanation of an automotive battery structure."
+    },
+    "gif-ppm": {
+      title: "PPM",
+      note: "Metric-focused motion visualization."
+    },
+    "gif-sunroof": {
+      title: "Integrated Panoramic Roof",
+      note: "Automotive structure motion visual."
+    },
+    "gif-low-carbon-car": {
+      title: "Low-Carbon Automotive Sheet",
+      note: "Animated communication for low-carbon materials."
+    },
+    "gif-lifecycle": {
+      title: "Full Lifecycle ICD",
+      note: "Animated lifecycle-process visualization."
+    },
+    "gif-netzero-center": {
+      title: "Net-Zero Carbon Processing Center",
+      note: "Low-carbon processing scene in motion."
+    },
+    "gif-hydrogen": {
+      title: "Hydrogen-Based Shaft Furnace Flow",
+      note: "Process explanation for a net-zero carbon pathway."
+    },
+    "gif-clean-transport": {
+      title: "Clean Transport Mode",
+      note: "Motion visual for clean transportation."
+    },
+    "gif-future-car": {
+      title: "Future Vehicle Low-Carbon Safety",
+      note: "Automotive material value proposition in motion."
+    },
+    "gif-digital-coil": {
+      title: "Digital Steel Coil",
+      note: "Digitalized steel-coil motion graphic."
+    },
+    "gif-digitalization": {
+      title: "Digital Intelligence",
+      note: "Motion visual for digital and intelligent operations."
+    },
+    "gif-laser": {
+      title: "Laser Tailor Welding",
+      note: "Animated manufacturing-process visual."
+    },
+    "show-media1": {
+      title: "Exhibition Media 01",
+      note: "On-site exhibition image record."
+    },
+    "show-guanshan": {
+      title: "Guanshan One-Shot Tour",
+      note: "Spatial footage with a continuous movement route."
+    },
+    "show-auto-expo": {
+      title: "Yitong Digital Power at Auto Shanghai",
+      note: "On-site auto show footage and edit."
+    },
+    "show-oylj-party": {
+      title: "Ouyeel Chain Gold Exhibition Record",
+      note: "On-site record of exhibition and party-building content."
+    },
+    "show-magang-tour": {
+      title: "MaSteel Exhibition Hall Walkthrough Cut",
+      note: "Selected segment from an exhibition hall project."
+    },
+    "show-magang-rd": {
+      title: "MaSteel R&D Center Technology Hall",
+      note: "Finished on-site film for a technology showroom."
+    },
+    "roam-guizhou": {
+      title: "Guizhou Survey & Design Walkthrough",
+      note: "Corporate spatial walkthrough with narration composite."
+    },
+    "roam-shanghai-auto": {
+      title: "Baosteel Auto Shanghai Demo",
+      note: "Booth proposal walkthrough with music finishing."
+    },
+    "roam-cscec": {
+      title: "CSCEC Fourth Bureau Walkthrough",
+      note: "Architectural space proposal walkthrough."
+    },
+    "roam-manufacturing": {
+      title: "Manufacturing Conference Walkthrough",
+      note: "Previsualization for a conference exhibition plan."
+    },
+    "roam-industry": {
+      title: "Industry Expo",
+      note: "Spatial demonstration for an exhibition project."
+    },
+    "roam-industry-3d": {
+      title: "Industry Expo Glasses-Free 3D",
+      note: "Glasses-free 3D visual and music package."
+    },
+    "roam-quzhou-school": {
+      title: "Quzhou Middle School Walkthrough",
+      note: "Campus spatial proposal walkthrough."
+    },
+    "roam-chenzhi": {
+      title: "Chenzhi Technology Auto Shanghai Bid Film",
+      note: "Bid proposal video and booth previsualization."
+    },
+    "roam-tonggu": {
+      title: "Tonggu Eco Study Proposal Film",
+      note: "Ecological study-trip spatial proposal walkthrough."
+    },
+    "model-blindbox-01": {
+      title: "Character Concept 01",
+      note: "Character and blind-box style concept image."
+    },
+    "model-blindbox-02": {
+      title: "Character Concept 02",
+      note: "Character and blind-box style concept image."
+    },
+    "model-fountain": {
+      title: "World Wind Fountain Rainbow",
+      note: "Public art and spatial visual video."
+    },
+    "model-visual-01": {
+      title: "3D Visual Draft",
+      note: "3D scene image and atmosphere visual."
+    },
+    "model-concept-01": {
+      title: "Concept Image 01",
+      note: "Visual concept and scene design."
+    },
+    "model-concept-02": {
+      title: "Concept Image 02",
+      note: "Visual concept and scene design."
+    },
+    "model-tongluren": {
+      title: "Fellow Traveler",
+      note: "Thematic visual work."
+    },
+    "model-baosteel-ip": {
+      title: "Baosteel IP",
+      note: "IP character motion graphic."
+    },
+    "model-deer": {
+      title: "Little Deer",
+      note: "Character motion and visual practice."
+    },
+    "model-wechat-photo": {
+      title: "Early Modeling Image",
+      note: "Staged 3D modeling image."
+    },
+    "model-wechat-shot": {
+      title: "Presentation Screenshot",
+      note: "Process screenshot from a project."
+    },
+    "model-sculpture-02": {
+      title: "Sculpture 02",
+      note: "Sculpture project image."
+    },
+    "model-sculpture-03": {
+      title: "Sculpture 03",
+      note: "Sculpture project image."
+    },
+    "model-sculpture": {
+      title: "Sculpture",
+      note: "Sculpture project image."
+    },
+    "steel-34": {
+      title: "Steel Material Render 01",
+      note: "Material and industrial surface rendering."
+    },
+    "steel-35": {
+      title: "Steel Material Render 02",
+      note: "Material and industrial surface rendering."
+    },
+    "steel-36": {
+      title: "Steel Material Render 03",
+      note: "Material and industrial surface rendering."
+    },
+    "steel-37": {
+      title: "Steel Material Render 04",
+      note: "Material and industrial surface rendering."
+    },
+    "steel-38": {
+      title: "Steel Material Render 05",
+      note: "Material and industrial surface rendering."
+    },
+    "steel-39": {
+      title: "Steel Material Render 06",
+      note: "Material and industrial surface rendering."
+    },
+    "steel-40": {
+      title: "Steel Material Render 07",
+      note: "Material and industrial surface rendering."
+    },
+    "steel-41": {
+      title: "Steel Material Render 08",
+      note: "Material and industrial surface rendering."
+    },
+    "steel-42": {
+      title: "Steel Material Render 09",
+      note: "Material and industrial surface rendering."
+    },
+    "steel-43": {
+      title: "Steel Material Render 10",
+      note: "Material and industrial surface rendering."
+    },
+    "student-01": {
+      title: "Student Work 01",
+      note: "Early visual work."
+    },
+    "student-02": {
+      title: "Student Work 02",
+      note: "Early visual work."
+    },
+    "student-03": {
+      title: "Student Work 03",
+      note: "Early visual work."
+    }
+  }
+};
+
 const works = rawWorks.map((item) => ({
   ...item,
   kind: getKind(item.src),
@@ -746,6 +1403,7 @@ const featuredIds = [
 ];
 
 const categoryLookup = new Map(categoryInfo.map((category) => [category.id, category]));
+let currentLanguage = getInitialLanguage();
 let activeCategory = "all";
 let searchTerm = "";
 let currentList = [...works];
@@ -768,7 +1426,8 @@ const dom = {
   modalMeta: document.getElementById("modalMeta"),
   closeModal: document.getElementById("closeModal"),
   prevWork: document.getElementById("prevWork"),
-  nextWork: document.getElementById("nextWork")
+  nextWork: document.getElementById("nextWork"),
+  langButtons: document.querySelectorAll("[data-lang-option]")
 };
 
 const previewObserver =
@@ -815,6 +1474,135 @@ function assetUrl(path) {
 
 function getCategory(item) {
   return categoryLookup.get(item.category) || categoryInfo[0];
+}
+
+function normalizeLanguage(language) {
+  return language === "en" ? "en" : "zh";
+}
+
+function getInitialLanguage() {
+  try {
+    const savedLanguage = window.localStorage.getItem(siteConfig.languageStorageKey);
+    if (savedLanguage) return normalizeLanguage(savedLanguage);
+  } catch (error) {
+    return "zh";
+  }
+  return "zh";
+}
+
+function lookupCopy(language, key) {
+  return key.split(".").reduce((value, part) => value && value[part], uiCopy[language]);
+}
+
+function t(key) {
+  return lookupCopy(currentLanguage, key) ?? lookupCopy("zh", key) ?? key;
+}
+
+function applyStaticCopy() {
+  document.documentElement.lang = t("htmlLang");
+  document.title = t("meta.title");
+
+  const description = document.querySelector('meta[name="description"]');
+  const ogTitle = document.querySelector('meta[property="og:title"]');
+  const ogDescription = document.querySelector('meta[property="og:description"]');
+  description?.setAttribute("content", t("meta.description"));
+  ogTitle?.setAttribute("content", t("meta.title"));
+  ogDescription?.setAttribute("content", t("meta.description"));
+
+  document.querySelectorAll("[data-i18n]").forEach((node) => {
+    node.textContent = t(node.dataset.i18n);
+  });
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((node) => {
+    node.setAttribute("placeholder", t(node.dataset.i18nPlaceholder));
+  });
+  document.querySelectorAll("[data-i18n-aria-label]").forEach((node) => {
+    node.setAttribute("aria-label", t(node.dataset.i18nAriaLabel));
+  });
+
+  dom.langButtons.forEach((button) => {
+    const isActive = button.dataset.langOption === currentLanguage;
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-pressed", String(isActive));
+  });
+}
+
+function setLanguage(language) {
+  const nextLanguage = normalizeLanguage(language);
+  if (nextLanguage === currentLanguage) return;
+
+  currentLanguage = nextLanguage;
+  try {
+    window.localStorage.setItem(siteConfig.languageStorageKey, currentLanguage);
+  } catch (error) {
+    // Private browsing or locked storage should not block the switch.
+  }
+
+  applyStaticCopy();
+  renderAll();
+  refreshOpenModal();
+}
+
+function getCategoryCopy(categoryOrId) {
+  const category = typeof categoryOrId === "string" ? categoryLookup.get(categoryOrId) : categoryOrId;
+  return category?.copy?.[currentLanguage] || category?.copy?.zh || { label: String(categoryOrId), summary: "" };
+}
+
+function getCategoryLabel(categoryOrId) {
+  return getCategoryCopy(categoryOrId).label;
+}
+
+function getCategorySummary(categoryOrId) {
+  return getCategoryCopy(categoryOrId).summary;
+}
+
+function getWorkCopy(item) {
+  const localized = workCopy[currentLanguage]?.[item.id] || {};
+  return {
+    title: localized.title || item.title,
+    note: localized.note || item.note,
+    tags: localized.tags || item.tags
+  };
+}
+
+function getSearchText(item) {
+  const category = getCategory(item);
+  const enCopy = workCopy.en?.[item.id] || {};
+  return [
+    item.title,
+    item.note,
+    item.category,
+    category.copy.zh.label,
+    category.copy.zh.summary,
+    category.copy.en.label,
+    category.copy.en.summary,
+    enCopy.title,
+    enCopy.note,
+    ...item.tags
+  ].join(" ");
+}
+
+function renderAll() {
+  renderMetrics();
+  renderHero();
+  renderFeatured();
+  renderCategories();
+  renderFilters();
+  renderWorks();
+}
+
+function refreshOpenModal() {
+  if (!dom.modal.classList.contains("is-open")) return;
+
+  const item = works.find((work) => work.id === dom.modal.dataset.id);
+  if (!item) return;
+
+  const itemCopy = getWorkCopy(item);
+  dom.modalTitle.textContent = itemCopy.title;
+  dom.modalCategory.textContent = `${getCategoryLabel(item.category)} / ${getKindLabel(item)}`;
+  dom.modalMeta.textContent = itemCopy.note;
+
+  const image = dom.modalMedia.querySelector("img");
+  if (image) image.alt = itemCopy.title;
 }
 
 function getKindLabel(item) {
@@ -885,7 +1673,7 @@ function createMediaShell(item) {
   image.loading = "lazy";
   image.decoding = "async";
   image.src = assetUrl(item.src);
-  image.alt = item.title;
+  image.alt = getWorkCopy(item).title;
   image.addEventListener("error", () => {
     image.remove();
     const placeholder = document.createElement("span");
@@ -927,6 +1715,7 @@ function createCard(item, variant = "work") {
   card.className = variant === "feature" ? "feature-card" : "work-card";
   card.dataset.id = item.id;
   card.style.setProperty("--accent", getCategory(item).color);
+  const itemCopy = getWorkCopy(item);
 
   const media = createMediaShell(item);
   const copy = document.createElement("div");
@@ -934,13 +1723,13 @@ function createCard(item, variant = "work") {
 
   const kicker = document.createElement("span");
   kicker.className = "card-kicker";
-  kicker.textContent = `${item.category} / ${getKindLabel(item)}`;
+  kicker.textContent = `${getCategoryLabel(item.category)} / ${getKindLabel(item)}`;
 
   const title = document.createElement("h3");
-  title.textContent = item.title;
+  title.textContent = itemCopy.title;
 
   const note = document.createElement("p");
-  note.textContent = item.note;
+  note.textContent = itemCopy.note;
 
   copy.append(kicker, title, note);
   card.append(media, copy);
@@ -953,10 +1742,10 @@ function renderMetrics() {
   const videoCount = works.filter((item) => item.kind === "video").length;
   const imageCount = works.length - videoCount;
   dom.metrics.replaceChildren(
-    metricNode("作品", works.length),
-    metricNode("视频", videoCount),
-    metricNode("图像/GIF", imageCount),
-    metricNode("分类", categoryInfo.length)
+    metricNode(t("metrics.works"), works.length),
+    metricNode(t("metrics.videos"), videoCount),
+    metricNode(t("metrics.images"), imageCount),
+    metricNode(t("metrics.categories"), categoryInfo.length)
   );
 }
 
@@ -982,6 +1771,7 @@ function renderHero() {
 
   dom.heroRail.replaceChildren(
     ...railItems.map((item) => {
+      const itemCopy = getWorkCopy(item);
       const button = document.createElement("button");
       button.className = "rail-item";
       button.type = "button";
@@ -993,10 +1783,10 @@ function renderHero() {
       const body = document.createElement("div");
       const title = document.createElement("p");
       title.className = "rail-title";
-      title.textContent = item.title;
+      title.textContent = itemCopy.title;
       const meta = document.createElement("p");
       meta.className = "rail-meta";
-      meta.textContent = `${item.category} / ${getKindLabel(item)}`;
+      meta.textContent = `${getCategoryLabel(item.category)} / ${getKindLabel(item)}`;
       body.append(title, meta);
 
       button.append(thumb, body);
@@ -1022,11 +1812,11 @@ function renderCategories() {
       button.style.setProperty("--accent", category.color);
 
       const title = document.createElement("h3");
-      title.textContent = category.id;
+      title.textContent = getCategoryLabel(category);
       const number = document.createElement("strong");
       number.textContent = count;
       const summary = document.createElement("p");
-      summary.textContent = category.summary;
+      summary.textContent = getCategorySummary(category);
 
       button.append(title, number, summary);
       button.addEventListener("click", () => {
@@ -1041,7 +1831,10 @@ function renderCategories() {
 }
 
 function renderFilters() {
-  const filters = [{ id: "all", label: "全部" }, ...categoryInfo.map((item) => ({ id: item.id, label: item.id }))];
+  const filters = [
+    { id: "all", label: t("filters.all") },
+    ...categoryInfo.map((item) => ({ id: item.id, label: getCategoryLabel(item) }))
+  ];
   dom.filterBar.replaceChildren(
     ...filters.map((filter) => {
       const count = filter.id === "all" ? works.length : works.filter((item) => item.category === filter.id).length;
@@ -1067,10 +1860,7 @@ function renderWorks() {
     const categoryMatch = activeCategory === "all" || item.category === activeCategory;
     if (!categoryMatch) return false;
     if (!normalizedSearch) return true;
-    return [item.title, item.category, item.note, ...item.tags]
-      .join(" ")
-      .toLowerCase()
-      .includes(normalizedSearch);
+    return getSearchText(item).toLowerCase().includes(normalizedSearch);
   });
 
   dom.workGrid.replaceChildren(...currentList.map((item) => createCard(item, "work")));
@@ -1083,10 +1873,12 @@ function openModal(id) {
 
   const indexInCurrentList = currentList.findIndex((work) => work.id === id);
   currentIndex = indexInCurrentList >= 0 ? indexInCurrentList : works.findIndex((work) => work.id === id);
+  const itemCopy = getWorkCopy(item);
 
-  dom.modalTitle.textContent = item.title;
-  dom.modalCategory.textContent = `${item.category} / ${getKindLabel(item)}`;
-  dom.modalMeta.textContent = item.note;
+  dom.modal.dataset.id = item.id;
+  dom.modalTitle.textContent = itemCopy.title;
+  dom.modalCategory.textContent = `${getCategoryLabel(item.category)} / ${getKindLabel(item)}`;
+  dom.modalMeta.textContent = itemCopy.note;
   dom.modalMedia.replaceChildren(createModalMedia(item));
   dom.modal.classList.add("is-open");
   dom.modal.setAttribute("aria-hidden", "false");
@@ -1101,16 +1893,16 @@ function createModalMedia(item) {
     video.playsInline = true;
     video.src = assetUrl(item.src);
     video.addEventListener("error", () => {
-      dom.modalMedia.replaceChildren(errorBox("视频暂时无法加载。"));
+      dom.modalMedia.replaceChildren(errorBox(t("errors.video")));
     });
     return video;
   }
 
   const image = document.createElement("img");
   image.src = assetUrl(item.src);
-  image.alt = item.title;
+  image.alt = getWorkCopy(item).title;
   image.addEventListener("error", () => {
-    dom.modalMedia.replaceChildren(errorBox("图片暂时无法加载。"));
+    dom.modalMedia.replaceChildren(errorBox(t("errors.image")));
   });
   return image;
 }
@@ -1141,6 +1933,10 @@ dom.searchInput.addEventListener("input", (event) => {
   renderWorks();
 });
 
+dom.langButtons.forEach((button) => {
+  button.addEventListener("click", () => setLanguage(button.dataset.langOption));
+});
+
 dom.closeModal.addEventListener("click", closeModal);
 dom.modal.addEventListener("click", (event) => {
   if (event.target.matches("[data-close]")) closeModal();
@@ -1155,9 +1951,5 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "ArrowRight") moveModal(1);
 });
 
-renderMetrics();
-renderHero();
-renderFeatured();
-renderCategories();
-renderFilters();
-renderWorks();
+applyStaticCopy();
+renderAll();

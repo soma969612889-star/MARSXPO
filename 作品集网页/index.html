@@ -20,16 +20,20 @@
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="回到顶部">
+      <a class="brand" href="#top" aria-label="回到顶部" data-i18n-aria-label="brand.aria">
         <span class="brand-mark">MX</span>
         <span>Mars XPO</span>
       </a>
-      <nav class="nav-links" aria-label="页面导航">
-        <a href="#featured">作品</a>
-        <a href="#profile">简历</a>
-        <a href="#categories">能力</a>
-        <a href="#works">归档</a>
+      <nav class="nav-links" aria-label="页面导航" data-i18n-aria-label="nav.aria">
+        <a href="#featured" data-i18n="nav.works">作品</a>
+        <a href="#profile" data-i18n="nav.resume">简历</a>
+        <a href="#categories" data-i18n="nav.skills">能力</a>
+        <a href="#works" data-i18n="nav.archive">归档</a>
       </nav>
+      <div class="language-switch" role="group" aria-label="语言切换" data-i18n-aria-label="language.aria">
+        <button type="button" data-lang-option="zh" aria-pressed="true">中</button>
+        <button type="button" data-lang-option="en" aria-pressed="false">EN</button>
+      </div>
     </header>
 
     <main id="top">
@@ -37,31 +41,31 @@
         <video id="heroVideo" class="hero-video" muted autoplay loop playsinline></video>
         <div class="hero-shade" aria-hidden="true"></div>
         <div class="hero-content">
-          <p class="eyebrow">Motion Design / Film / Exhibition</p>
+          <p class="eyebrow" data-i18n="hero.eyebrow">Motion Design / Film / Exhibition</p>
           <h1 id="hero-title">
-            <span>Mars鹏</span>
-            <span>作品集</span>
+            <span data-i18n="hero.titleName">Mars鹏</span>
+            <span data-i18n="hero.titlePortfolio">作品集</span>
           </h1>
-          <p class="hero-copy">
+          <p class="hero-copy" data-i18n="hero.copy">
             从品牌影像、三维动画到展厅数字内容，把复杂项目做成可观看、可理解、能落地的视觉叙事。
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#featured">查看作品</a>
-            <a class="button button-quiet" href="#profile">查看简历</a>
-            <a class="button button-quiet" href="#works">全部归档</a>
+            <a class="button button-primary" href="#featured" data-i18n="hero.actionWorks">查看作品</a>
+            <a class="button button-quiet" href="#profile" data-i18n="hero.actionResume">查看简历</a>
+            <a class="button button-quiet" href="#works" data-i18n="hero.actionArchive">全部归档</a>
           </div>
           <dl class="metrics" id="metrics"></dl>
         </div>
-        <aside class="hero-rail" id="heroRail" aria-label="精选作品"></aside>
+        <aside class="hero-rail" id="heroRail" aria-label="精选作品" data-i18n-aria-label="hero.railAria"></aside>
       </section>
 
       <section class="section featured-section" id="featured" aria-labelledby="featured-title">
         <div class="section-head">
           <div>
-            <p class="eyebrow">Featured</p>
-            <h2 id="featured-title">Selected Motion Work</h2>
+            <p class="eyebrow" data-i18n="featured.eyebrow">Featured</p>
+            <h2 id="featured-title" data-i18n="featured.title">Selected Motion Work</h2>
           </div>
-          <p>
+          <p data-i18n="featured.copy">
             先用代表项目建立气质：企业叙事、IP动画、展台空间与科技展示。
           </p>
         </div>
@@ -71,15 +75,15 @@
       <section class="section profile-section" id="profile" aria-labelledby="profile-title">
         <div class="profile-layout">
           <div class="profile-intro">
-            <p class="eyebrow">Profile / Resume</p>
+            <p class="eyebrow" data-i18n="profile.eyebrow">Profile / Resume</p>
             <h2 id="profile-title">
-              <span>从创意概念，</span>
-              <span>到成片交付。</span>
+              <span data-i18n="profile.titleLine1">从创意概念，</span>
+              <span data-i18n="profile.titleLine2">到成片交付。</span>
             </h2>
-            <p class="profile-lead">
+            <p class="profile-lead" data-i18n="profile.lead">
               马鹏，数字视觉内容制作与展陈影像负责人。熟悉视频策划、拍摄剪辑、AE视觉包装、三维资产、IP形象与AIGC辅助创作，能够从前期方案、中期制作到后期维护推进项目落地。
             </p>
-            <div class="profile-tags" aria-label="核心能力">
+            <div class="profile-tags" aria-label="核心能力" data-i18n-aria-label="profile.tagsAria">
               <span>Motion Design</span>
               <span>Film Editing</span>
               <span>Exhibition Media</span>
@@ -88,81 +92,81 @@
             </div>
           </div>
 
-          <div class="resume-stats" aria-label="履历亮点">
+          <div class="resume-stats" aria-label="履历亮点" data-i18n-aria-label="profile.statsAria">
             <article>
-              <span>2020 - Now</span>
-              <strong>数字部主管</strong>
-              <p>统筹展厅数字内容、企业宣传片、空间漫游与上屏视频制作。</p>
+              <span data-i18n="profile.stat1.kicker">2020 - Now</span>
+              <strong data-i18n="profile.stat1.title">数字部主管</strong>
+              <p data-i18n="profile.stat1.copy">统筹展厅数字内容、企业宣传片、空间漫游与上屏视频制作。</p>
             </article>
             <article>
-              <span>20+ / Year</span>
-              <strong>项目交付</strong>
-              <p>每年完成二十余个大小项目，覆盖大型展厅、临展与品牌影像。</p>
+              <span data-i18n="profile.stat2.kicker">20+ / Year</span>
+              <strong data-i18n="profile.stat2.title">项目交付</strong>
+              <p data-i18n="profile.stat2.copy">每年完成二十余个大小项目，覆盖大型展厅、临展与品牌影像。</p>
             </article>
             <article>
-              <span>Awards</span>
-              <strong>国际设计奖项</strong>
-              <p>参与主创项目获得 London Design Awards、IDA、GPDP 等设计奖项。</p>
+              <span data-i18n="profile.stat3.kicker">Awards</span>
+              <strong data-i18n="profile.stat3.title">国际设计奖项</strong>
+              <p data-i18n="profile.stat3.copy">参与主创项目获得 London Design Awards、IDA、GPDP 等设计奖项。</p>
             </article>
           </div>
         </div>
 
         <div class="resume-board">
           <div class="resume-column">
-            <p class="board-label">Experience</p>
+            <p class="board-label" data-i18n="resume.experienceLabel">Experience</p>
             <ol class="timeline-list">
               <li>
-                <time>2020.04 - 至今</time>
-                <h3>上海意通展览展示有限公司 / 数字部主管</h3>
-                <p>负责方案阶段影像表现、预算与排期，统筹拍摄剪辑、特效包装、三维内容、客户沟通及展厅数字内容维护。</p>
+                <time data-i18n="resume.exp1.time">2020.04 - 至今</time>
+                <h3 data-i18n="resume.exp1.title">上海意通展览展示有限公司 / 数字部主管</h3>
+                <p data-i18n="resume.exp1.copy">负责方案阶段影像表现、预算与排期，统筹拍摄剪辑、特效包装、三维内容、客户沟通及展厅数字内容维护。</p>
               </li>
               <li>
-                <time>2018.06 - 2019.09</time>
-                <h3>电子科技大学文化艺术教育中心 / CMI 项目组长</h3>
-                <p>负责新媒体交互创作、团队协作与现场技术支持，项目涵盖投影、互动装置与发布会现场视觉。</p>
+                <time data-i18n="resume.exp2.time">2018.06 - 2019.09</time>
+                <h3 data-i18n="resume.exp2.title">电子科技大学文化艺术教育中心 / CMI 项目组长</h3>
+                <p data-i18n="resume.exp2.copy">负责新媒体交互创作、团队协作与现场技术支持，项目涵盖投影、互动装置与发布会现场视觉。</p>
               </li>
               <li>
-                <time>2017.04 - 2018.06</time>
-                <h3>成都意空间美术设计有限公司 / 设计制作</h3>
-                <p>参与三维建模、视频动画与竞标表现，并完成活动视觉与现场物料设计。</p>
+                <time data-i18n="resume.exp3.time">2017.04 - 2018.06</time>
+                <h3 data-i18n="resume.exp3.title">成都意空间美术设计有限公司 / 设计制作</h3>
+                <p data-i18n="resume.exp3.copy">参与三维建模、视频动画与竞标表现，并完成活动视觉与现场物料设计。</p>
               </li>
             </ol>
           </div>
 
           <div class="resume-column">
-            <p class="board-label">Capabilities</p>
+            <p class="board-label" data-i18n="resume.capabilityLabel">Capabilities</p>
             <div class="capability-list">
               <article>
                 <span>CH 01</span>
-                <h3>视频后期与成片</h3>
-                <p>脚本梳理、拍摄落地、剪辑节奏、字幕包装、多版本输出。</p>
+                <h3 data-i18n="resume.cap1.title">视频后期与成片</h3>
+                <p data-i18n="resume.cap1.copy">脚本梳理、拍摄落地、剪辑节奏、字幕包装、多版本输出。</p>
               </article>
               <article>
                 <span>CH 02</span>
-                <h3>展陈与上屏内容</h3>
-                <p>展厅媒体、裸眼3D大屏、空间漫游、互动展示内容制作。</p>
+                <h3 data-i18n="resume.cap2.title">展陈与上屏内容</h3>
+                <p data-i18n="resume.cap2.copy">展厅媒体、裸眼3D大屏、空间漫游、互动展示内容制作。</p>
               </article>
               <article>
                 <span>CH 03</span>
-                <h3>三维视觉与IP</h3>
-                <p>三维建模、角色形象、简单绑定、3D打印与动效资产。</p>
+                <h3 data-i18n="resume.cap3.title">三维视觉与IP</h3>
+                <p data-i18n="resume.cap3.copy">三维建模、角色形象、简单绑定、3D打印与动效资产。</p>
               </article>
               <article>
                 <span>CH 04</span>
-                <h3>AIGC 工作流</h3>
-                <p>使用 Midjourney、Stable Diffusion、ChatGPT 辅助概念、脚本、分镜与视觉探索。</p>
+                <h3 data-i18n="resume.cap4.title">AIGC 工作流</h3>
+                <p data-i18n="resume.cap4.copy">使用 Midjourney、Stable Diffusion、ChatGPT 辅助概念、脚本、分镜与视觉探索。</p>
               </article>
             </div>
           </div>
 
           <div class="resume-column resume-side">
-            <p class="board-label">Education / Tools</p>
+            <p class="board-label" data-i18n="resume.educationLabel">Education / Tools</p>
             <div class="resume-note">
-              <span>2018 / Bachelor</span>
-              <h3>电子科技大学成都学院</h3>
-              <p>影视技术（动画）本科。校园阶段参与校庆视觉、新媒体交互与 AR 作品创作。</p>
+              <span data-i18n="resume.educationTime">2018 / Bachelor</span>
+              <h3 data-i18n="resume.educationTitle">电子科技大学成都学院</h3>
+              <p data-i18n="resume.educationCopy">影视技术（动画）本科。校园阶段参与校庆视觉、新媒体交互与 AR 作品创作。</p>
             </div>
-            <div class="tool-cloud" aria-label="软件与工具">
+            <div class="tool-cloud" aria-label="软件与工具" data-i18n-aria-label="resume.toolsAria">
               <span>After Effects</span>
               <span>Premiere Pro</span>
               <span>Maya</span>
@@ -174,7 +178,7 @@
               <span>Midjourney</span>
               <span>Stable Diffusion</span>
             </div>
-            <p class="resume-footnote">完整简历与联系方式可按需提供。</p>
+            <p class="resume-footnote" data-i18n="resume.footnote">完整简历与联系方式可按需提供。</p>
           </div>
         </div>
       </section>
@@ -182,10 +186,10 @@
       <section class="section category-section" id="categories" aria-labelledby="category-title">
         <div class="section-head">
           <div>
-            <p class="eyebrow">Categories</p>
-            <h2 id="category-title">Creative Fields</h2>
+            <p class="eyebrow" data-i18n="categories.eyebrow">Categories</p>
+            <h2 id="category-title" data-i18n="categories.title">Creative Fields</h2>
           </div>
-          <p>
+          <p data-i18n="categories.copy">
             按真实交付方式整理，从短片剪辑到三维视觉，从现场展陈到空间漫游。
           </p>
         </div>
@@ -195,23 +199,29 @@
       <section class="section works-section" id="works" aria-labelledby="works-title">
         <div class="section-head section-head-stacked">
           <div>
-            <p class="eyebrow">Archive</p>
-            <h2 id="works-title">Project Archive</h2>
+            <p class="eyebrow" data-i18n="works.eyebrow">Archive</p>
+            <h2 id="works-title" data-i18n="works.title">Project Archive</h2>
           </div>
           <label class="search-box">
-            <span>Search</span>
-            <input id="searchInput" type="search" placeholder="输入片名、类别或关键词" autocomplete="off" />
+            <span data-i18n="works.searchLabel">Search</span>
+            <input
+              id="searchInput"
+              type="search"
+              placeholder="输入片名、类别或关键词"
+              data-i18n-placeholder="works.searchPlaceholder"
+              autocomplete="off"
+            />
           </label>
         </div>
 
-        <div class="filter-bar" id="filterBar" role="tablist" aria-label="作品分类筛选"></div>
+        <div class="filter-bar" id="filterBar" role="tablist" aria-label="作品分类筛选" data-i18n-aria-label="works.filterAria"></div>
         <div class="work-grid" id="workGrid"></div>
-        <p class="empty-state" id="emptyState" hidden>没有找到匹配作品。</p>
+        <p class="empty-state" id="emptyState" hidden data-i18n="works.empty">没有找到匹配作品。</p>
       </section>
     </main>
 
     <footer class="site-footer">
-      <span>Mars XPO / Motion Portfolio</span>
+      <span data-i18n="footer.label">Mars XPO / Motion Portfolio</span>
       <a href="https://www.marsxpo.com/">www.marsxpo.com</a>
     </footer>
 
@@ -223,13 +233,13 @@
             <p class="modal-category" id="modalCategory"></p>
             <h3 id="modalTitle"></h3>
           </div>
-          <button class="icon-button" type="button" id="closeModal" aria-label="关闭预览">×</button>
+          <button class="icon-button" type="button" id="closeModal" aria-label="关闭预览" data-i18n-aria-label="modal.closeAria">×</button>
         </div>
         <div class="modal-media" id="modalMedia"></div>
         <div class="modal-footer">
-          <button class="button button-quiet" type="button" id="prevWork">上一件</button>
+          <button class="button button-quiet" type="button" id="prevWork" data-i18n="modal.prev">上一件</button>
           <p id="modalMeta"></p>
-          <button class="button button-quiet" type="button" id="nextWork">下一件</button>
+          <button class="button button-quiet" type="button" id="nextWork" data-i18n="modal.next">下一件</button>
         </div>
       </div>
     </div>
