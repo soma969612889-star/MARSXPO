@@ -1864,11 +1864,19 @@ function hydrateVideo(video) {
   video.load();
 }
 
+function applyMediaGuards(media) {
+  media.draggable = false;
+  media.classList.add("protected-media");
+  if (media.dataset.guarded) return;
+  media.dataset.guarded = "true";
+  media.addEventListener("contextmenu", (event) => event.preventDefault());
+  media.addEventListener("dragstart", (event) => event.preventDefault());
+}
+
 function applyVideoGuards(video) {
+  applyMediaGuards(video);
   video.controlsList = "nodownload noplaybackrate";
   video.disablePictureInPicture = true;
-  video.setAttribute("oncontextmenu", "return false");
-  video.addEventListener("contextmenu", (event) => event.preventDefault());
 }
 
 function observeVideo(video) {
@@ -1910,6 +1918,7 @@ function createMediaShell(item) {
   }
 
   const image = document.createElement("img");
+  applyMediaGuards(image);
   image.loading = "lazy";
   image.decoding = "async";
   image.src = assetUrl(item.src);
@@ -2001,6 +2010,7 @@ function metricNode(label, value) {
 
 function renderHero() {
   const hero = works.find((item) => item.id === heroWorkId) || works[0];
+  applyVideoGuards(dom.heroVideo);
   dom.heroVideo.src = assetUrl(hero.src);
   dom.heroVideo.play().catch(() => {});
 
@@ -2181,6 +2191,7 @@ function createModalMedia(item) {
   }
 
   const image = document.createElement("img");
+  applyMediaGuards(image);
   image.src = assetUrl(item.src);
   image.alt = getWorkCopy(item).title;
   image.addEventListener("error", () => {

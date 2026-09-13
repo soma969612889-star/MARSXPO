@@ -50,6 +50,13 @@ video {
   max-width: 100%;
 }
 
+.protected-media {
+  -webkit-touch-callout: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 button,
 input {
   font: inherit;
