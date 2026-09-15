@@ -238,6 +238,17 @@ const uiCopy = {
       prev: "上一件",
       next: "下一件"
     },
+    player: {
+      controls: "视频播放控制",
+      play: "播放",
+      pause: "暂停",
+      mute: "静音",
+      unmute: "取消静音",
+      seek: "播放进度",
+      volume: "音量",
+      fullscreen: "全屏",
+      exitFullscreen: "退出全屏"
+    },
     metrics: {
       works: "作品",
       videos: "视频",
@@ -396,6 +407,17 @@ const uiCopy = {
       closeAria: "Close preview",
       prev: "Previous",
       next: "Next"
+    },
+    player: {
+      controls: "Video controls",
+      play: "Play",
+      pause: "Pause",
+      mute: "Mute",
+      unmute: "Unmute",
+      seek: "Playback position",
+      volume: "Volume",
+      fullscreen: "Fullscreen",
+      exitFullscreen: "Exit fullscreen"
     },
     metrics: {
       works: "Works",
@@ -1620,6 +1642,8 @@ let activeCategory = "all";
 let searchTerm = "";
 let currentList = [...works];
 let currentIndex = 0;
+let disposePlayer = null;
+let refreshPlayer = null;
 
 const dom = {
   heroVideo: document.getElementById("heroVideo"),
@@ -1833,8 +1857,9 @@ function refreshOpenModal() {
   dom.modalCategory.textContent = `${getCategoryLabel(item.category)} / ${getKindLabel(item)}`;
   dom.modalMeta.textContent = itemCopy.note;
 
-  const image = dom.modalMedia.querySelector("img");
+  const image = dom.modalMedia.querySelector("img.protected-media");
   if (image) image.alt = itemCopy.title;
+  refreshPlayer?.();
 }
 
 function getKindLabel(item) {
@@ -1875,8 +1900,10 @@ function applyMediaGuards(media) {
 
 function applyVideoGuards(video) {
   applyMediaGuards(video);
+  video.controls = false;
   video.controlsList = "nodownload noplaybackrate";
   video.disablePictureInPicture = true;
+  video.disableRemotePlayback = true;
 }
 
 function observeVideo(video) {
@@ -2170,6 +2197,7 @@ function openModal(id) {
   dom.modalTitle.textContent = itemCopy.title;
   dom.modalCategory.textContent = `${getCategoryLabel(item.category)} / ${getKindLabel(item)}`;
   dom.modalMeta.textContent = itemCopy.note;
+  clearModalMedia();
   dom.modalMedia.replaceChildren(createModalMedia(item));
   dom.modal.classList.add("is-open");
   dom.modal.setAttribute("aria-hidden", "false");
@@ -2178,16 +2206,7 @@ function openModal(id) {
 
 function createModalMedia(item) {
   if (item.kind === "video") {
-    const video = document.createElement("video");
-    video.controls = true;
-    video.autoplay = true;
-    video.playsInline = true;
-    applyVideoGuards(video);
-    video.src = assetUrl(item.src);
-    video.addEventListener("error", () => {
-      dom.modalMedia.replaceChildren(errorBox(t("errors.video")));
-    });
-    return video;
+    return createVideoPlayer(item);
   }
 
   const image = document.createElement("img");
@@ -2200,6 +2219,167 @@ function createModalMedia(item) {
   return image;
 }
 
+function formatPlaybackTime(seconds) {
+  const total = Number.isFinite(seconds) ? Math.max(0, Math.floor(seconds)) : 0;
+  const hours = Math.floor(total / 3600);
+  const minutes = Math.floor((total % 3600) / 60);
+  const clock = `${hours ? String(minutes).padStart(2, "0") : minutes}:${String(total % 60).padStart(2, "0")}`;
+  return hours ? `${hours}:${clock}` : clock;
+}
+
+function createVideoPlayer(item) {
+  const player = document.createElement("div");
+  player.className = "video-player";
+  const video = document.createElement("video");
+  video.playsInline = true;
+  video.preload = "metadata";
+  video.tabIndex = 0;
+  applyVideoGuards(video);
+
+  const controls = document.createElement("div");
+  controls.className = "player-controls";
+  controls.setAttribute("role", "group");
+
+  const iconButton = (className) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = `player-button ${className}`;
+    const icon = document.createElement("img");
+    icon.alt = "";
+    icon.setAttribute("aria-hidden", "true");
+    icon.draggable = false;
+    button.append(icon);
+    return button;
+  };
+  const setButton = (button, icon, key) => {
+    const iconImage = button.querySelector("img");
+    if (iconImage.dataset.icon !== icon) {
+      iconImage.src = `./assets/player-icons/${icon}.svg`;
+      iconImage.dataset.icon = icon;
+    }
+    button.title = t(key);
+    button.setAttribute("aria-label", t(key));
+  };
+
+  const playButton = iconButton("player-play");
+  const muteButton = iconButton("player-mute");
+  const fullscreenButton = iconButton("player-fullscreen");
+  const seek = document.createElement("input");
+  seek.type = "range";
+  seek.className = "player-seek";
+  seek.min = "0";
+  seek.max = "0";
+  seek.step = "0.1";
+  seek.value = "0";
+  seek.disabled = true;
+  const time = document.createElement("span");
+  time.className = "player-time";
+  const volume = document.createElement("input");
+  volume.type = "range";
+  volume.className = "player-volume";
+  volume.min = "0";
+  volume.max = "1";
+  volume.step = "0.05";
+  volume.value = "1";
+  controls.append(playButton, seek, time, muteButton, volume, fullscreenButton);
+  player.append(video, controls);
+
+  const isFullscreen = () => document.fullscreenElement === player || player.classList.contains("is-expanded");
+  const updateControls = () => {
+    const muted = video.muted || video.volume === 0;
+    setButton(playButton, video.paused ? "play" : "pause", video.paused ? "player.play" : "player.pause");
+    setButton(muteButton, muted ? "volume-x" : "volume-2", muted ? "player.unmute" : "player.mute");
+    setButton(fullscreenButton, isFullscreen() ? "minimize" : "maximize", isFullscreen() ? "player.exitFullscreen" : "player.fullscreen");
+    muteButton.setAttribute("aria-pressed", String(muted));
+    fullscreenButton.setAttribute("aria-pressed", String(isFullscreen()));
+    controls.setAttribute("aria-label", t("player.controls"));
+    video.setAttribute("aria-label", getWorkCopy(item).title);
+    seek.setAttribute("aria-label", t("player.seek"));
+    volume.setAttribute("aria-label", t("player.volume"));
+    volume.value = String(muted ? 0 : video.volume);
+  };
+  const updateTime = () => {
+    const duration = Number.isFinite(video.duration) ? video.duration : 0;
+    seek.disabled = duration <= 0;
+    seek.max = String(duration);
+    seek.value = String(video.currentTime);
+    time.textContent = `${formatPlaybackTime(video.currentTime)} / ${formatPlaybackTime(duration)}`;
+    seek.setAttribute("aria-valuetext", time.textContent);
+  };
+  const togglePlayback = () => {
+    if (video.paused) video.play().catch(updateControls);
+    else video.pause();
+  };
+  const toggleFullscreen = async () => {
+    if (document.fullscreenElement === player) {
+      await document.exitFullscreen().catch(() => {});
+    } else if (player.classList.contains("is-expanded")) {
+      player.classList.remove("is-expanded");
+    } else if (document.fullscreenEnabled && player.requestFullscreen) {
+      try {
+        await player.requestFullscreen();
+      } catch {
+        player.classList.add("is-expanded");
+      }
+    } else {
+      // Keep our controls when native element fullscreen is unavailable.
+      player.classList.add("is-expanded");
+    }
+    updateControls();
+  };
+
+  playButton.addEventListener("click", togglePlayback);
+  video.addEventListener("click", togglePlayback);
+  video.addEventListener("keydown", (event) => {
+    if (event.key === " " || event.key === "Enter") {
+      event.preventDefault();
+      togglePlayback();
+    }
+  });
+  muteButton.addEventListener("click", () => {
+    if (video.muted || video.volume === 0) {
+      video.muted = false;
+      if (video.volume === 0) video.volume = 1;
+    } else video.muted = true;
+  });
+  volume.addEventListener("input", () => {
+    video.volume = Number(volume.value);
+    video.muted = video.volume === 0;
+  });
+  seek.addEventListener("input", () => {
+    if (!seek.disabled) video.currentTime = Number(seek.value);
+    updateTime();
+  });
+  fullscreenButton.addEventListener("click", toggleFullscreen);
+  ["play", "pause", "ended", "volumechange"].forEach((event) => video.addEventListener(event, updateControls));
+  ["loadedmetadata", "durationchange", "timeupdate"].forEach((event) => video.addEventListener(event, updateTime));
+  document.addEventListener("fullscreenchange", updateControls);
+  disposePlayer = () => document.removeEventListener("fullscreenchange", updateControls);
+  refreshPlayer = updateControls;
+  video.addEventListener("error", () => {
+    if (!dom.modalMedia.contains(player)) return;
+    clearModalMedia();
+    dom.modalMedia.replaceChildren(errorBox(t("errors.video")));
+  });
+  video.src = assetUrl(item.src);
+  updateControls();
+  updateTime();
+  video.play().catch(updateControls);
+  return player;
+}
+
+function clearModalMedia() {
+  disposePlayer?.();
+  disposePlayer = null;
+  refreshPlayer = null;
+  dom.modalMedia.querySelectorAll("video").forEach((video) => {
+    video.pause();
+    video.removeAttribute("src");
+    video.load();
+  });
+  dom.modalMedia.replaceChildren();
+}
+
 function errorBox(message) {
   const box = document.createElement("div");
   box.className = "empty-state";
@@ -2210,8 +2390,7 @@ function errorBox(message) {
 function closeModal() {
   dom.modal.classList.remove("is-open");
   dom.modal.setAttribute("aria-hidden", "true");
-  dom.modalMedia.querySelectorAll("video").forEach((video) => video.pause());
-  dom.modalMedia.replaceChildren();
+  clearModalMedia();
   document.body.classList.remove("modal-open");
 }
 
@@ -2239,7 +2418,15 @@ dom.nextWork.addEventListener("click", () => moveModal(1));
 
 document.addEventListener("keydown", (event) => {
   if (!dom.modal.classList.contains("is-open")) return;
-  if (event.key === "Escape") closeModal();
+  if (event.key === "Escape") {
+    const expandedPlayer = dom.modalMedia.querySelector(".is-expanded");
+    if (expandedPlayer) {
+      expandedPlayer.classList.remove("is-expanded");
+      refreshPlayer?.();
+    } else if (!document.fullscreenElement) closeModal();
+    return;
+  }
+  if (event.target.closest(".video-player, input, textarea, select")) return;
   if (event.key === "ArrowLeft") moveModal(-1);
   if (event.key === "ArrowRight") moveModal(1);
 });

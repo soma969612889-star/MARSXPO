@@ -1160,6 +1160,119 @@ h3 {
   border-top: 1px solid var(--line);
 }
 
+.video-player {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 0;
+  background: #030303;
+}
+
+.video-player video {
+  min-height: 0;
+  max-height: calc(90dvh - 230px);
+  cursor: pointer;
+}
+
+.player-controls {
+  display: grid;
+  grid-template-columns: 40px minmax(48px, 1fr) 132px 40px 80px 40px;
+  align-items: center;
+  gap: 8px;
+  flex: 0 0 auto;
+  min-height: 56px;
+  padding: 6px 12px;
+  background: #141414;
+  border-top: 1px solid var(--line);
+}
+
+.player-button {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.player-button:hover {
+  background: #303030;
+}
+
+.player-button:focus-visible,
+.player-controls input:focus-visible,
+.video-player video:focus-visible {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: -2px;
+}
+
+.modal-media .player-button img {
+  width: 20px;
+  height: 20px;
+  filter: invert(1);
+  pointer-events: none;
+}
+
+.player-controls input {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.player-time {
+  color: var(--soft);
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.video-player:fullscreen,
+.video-player.is-expanded {
+  width: 100%;
+  height: 100dvh;
+  max-height: none;
+}
+
+.video-player.is-expanded {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+}
+
+.video-player:fullscreen video,
+.video-player.is-expanded video {
+  flex: 1 1 0;
+  max-height: none;
+}
+
+@media (max-width: 600px) {
+  .player-controls {
+    grid-template-columns: 40px minmax(0, 1fr) 40px 40px;
+    gap: 4px 8px;
+    padding: 6px 8px;
+  }
+
+  .player-seek {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    height: 20px;
+  }
+
+  .player-volume {
+    display: none;
+  }
+
+  .video-player video {
+    max-height: calc(94dvh - 260px);
+  }
+}
+
 .modal-footer .button-quiet {
   min-height: 40px;
 }
