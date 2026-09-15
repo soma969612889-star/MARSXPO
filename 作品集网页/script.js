@@ -1717,6 +1717,8 @@ function normalizeLanguage(language) {
 }
 
 function getInitialLanguage() {
+  const requestedLanguage = new URLSearchParams(window.location.search).get("lang");
+  if (requestedLanguage === "en" || requestedLanguage === "zh") return requestedLanguage;
   try {
     const savedLanguage = window.localStorage.getItem(siteConfig.languageStorageKey);
     if (savedLanguage) return normalizeLanguage(savedLanguage);
@@ -1767,7 +1769,18 @@ function applyStaticCopy() {
 
 function setLanguage(language) {
   const nextLanguage = normalizeLanguage(language);
-  if (nextLanguage === currentLanguage) return;
+  try {
+    const pageUrl = new URL(window.location.href);
+    pageUrl.searchParams.set("lang", nextLanguage);
+    window.history.replaceState(window.history.state, "", pageUrl);
+  } catch (error) {
+    // Language switching remains available when history updates are blocked.
+  }
+  if (nextLanguage === currentLanguage) {
+    applyStaticCopy();
+    refreshOpenModal();
+    return;
+  }
 
   currentLanguage = nextLanguage;
   try {
