@@ -264,7 +264,7 @@ const uiCopy = {
   en: {
     htmlLang: "en",
     meta: {
-      title: "Mars Peng Portfolio | Motion Design",
+      title: "Mars Portfolio | Motion Design",
       description: "A portfolio of film, animation, exhibition media, spatial walkthroughs and 3D visual work."
     },
     brand: { aria: "Back to top" },
@@ -278,9 +278,9 @@ const uiCopy = {
     language: { aria: "Language switcher" },
     hero: {
       eyebrow: "Motion Design / Film / Exhibition",
-      titleName: "Mars Peng",
+      titleName: "Mars",
       titlePortfolio: "Portfolio",
-      copy: "From brand films and 3D animation to exhibition media, I turn complex projects into visual stories that are watchable, legible and production-ready.",
+      copy: "I work on brand films, 3D animation and exhibition media, with a focus on clear storytelling and thoughtful production.",
       actionWorks: "View Works",
       actionResume: "View Resume",
       actionArchive: "Full Archive",
@@ -295,28 +295,28 @@ const uiCopy = {
       eyebrow: "Profile / Resume",
       titleLine1: "From first idea,",
       titleLine2: "to final delivery.",
-      lead: "Mars Peng is a digital visual content and exhibition media lead. His work spans video planning, shooting, editing, AE motion packaging, 3D assets, IP visuals and AIGC-assisted ideation. He coordinates exhibition interactive software production as a key creative contributor, holds a CAAC drone license, brings six years of aerial filming experience, and moves projects from proposal to production and long-term maintenance.",
+      lead: "I'm Mars, and I work in digital visual content and exhibition media. My experience includes planning, filming, editing, motion graphics, 3D visuals and AI-assisted creative work. I coordinate the production of interactive software for exhibitions and help shape the core creative work alongside the team. I hold a CAAC drone license and have six years of aerial filming experience. I enjoy working with others to bring ideas through production and support them after delivery.",
       tagsAria: "Core capabilities",
       statsAria: "Resume highlights",
       stat1: {
         kicker: "2020 - Now",
         title: "Digital Dept. Lead",
-        copy: "Leading exhibition media, interactive software production, corporate films, spatial walkthroughs and screen content, with hands-on creative direction."
+        copy: "I coordinate exhibition media, interactive software, corporate films and spatial walkthroughs, while contributing to the creative work with the team."
       },
       stat2: {
         kicker: "20+ / Year",
         title: "Projects Delivered",
-        copy: "Delivering over twenty projects a year across major showrooms, temporary exhibitions and brand films."
+        copy: "I work with the team to deliver over twenty projects a year across showrooms, temporary exhibitions and brand films."
       },
       stat3: {
         kicker: "Awards",
         title: "Design Recognition",
-        copy: "Key creative projects have received recognition from London Design Awards, IDA and GPDP."
+        copy: "Projects I've contributed to have received recognition from London Design Awards, IDA and GPDP."
       },
       stat4: {
         kicker: "CAAC / 6 Years",
         title: "Aerial Filming",
-        copy: "CAAC drone license holder with six years of aerial filming experience for spaces, architecture and project-site documentation."
+        copy: "I hold a CAAC drone license and have six years of aerial filming experience, documenting spaces, architecture and project sites."
       }
     },
     resume: {
@@ -328,47 +328,47 @@ const uiCopy = {
       exp1: {
         time: "2020.04 - Now",
         title: "Shanghai Yitong Exhibition Display / Digital Dept. Lead",
-        copy: "Responsible for proposal-stage visual storytelling, budgets and schedules, while coordinating scripts, shoots, edits, AE motion packaging, 3D content, exhibition interactive software production, client communication and exhibition media maintenance as a key creative contributor.",
+        copy: "I plan visual content, budgets and schedules, and coordinate filming, editing, motion graphics, 3D content and exhibition interactive software. I also contribute to the core creative work and stay involved in client communication and ongoing maintenance.",
         software: "After Effects / Premiere Pro / Maya / C4D / Blender / D5 / Photoshop / Illustrator / Midjourney / Stable Diffusion / ChatGPT",
         output: "Corporate films, documentaries, story films, exhibition screen content, exhibition interactive software, glasses-free 3D screen animation, spatial walkthroughs, IP visuals, 3D sticker sets and 3D-print models."
       },
       exp2: {
         time: "2018.06 - 2019.09",
         title: "UESTC Culture & Art Education Center / CMI Project Lead",
-        copy: "Led new-media interaction projects across ideation, art direction, team coordination and on-site technical support for projection, interactive installations and launch-event visuals.",
+        copy: "I led the CMI project team, working with colleagues on concepts, art direction and on-site technical support for projection, interactive installations and launch-event visuals.",
         software: "After Effects / Premiere Pro / Maya / Photoshop / Illustrator / projection and interactive hardware setup",
         output: "New-media interactive works, projection pieces, interactive installations, launch-event visuals, recording support and presentation materials."
       },
       exp3: {
         time: "2017.04 - 2018.06",
         title: "Chengdu Yikongjian Art Design / Design Production",
-        copy: "Contributed to 3D modeling, video animation and bidding visuals, with additional event identity, forum material and on-site installation design.",
+        copy: "I contributed to 3D modeling, animation and proposal visuals, and helped with event identities, forum materials and on-site installation design.",
         software: "Maya / After Effects / Premiere Pro / Photoshop / Illustrator / SketchUp / 3ds Max",
         output: "3D models, video animation, bidding visuals, VI design, forum materials, banners, flags and annual-meeting installation visuals."
       },
       cap1: {
         title: "Editing & Finishing",
-        copy: "Script structure, shoot execution, pacing, subtitles, motion packaging and multi-version delivery."
+        copy: "I work on scripts, filming, editing, subtitles and motion graphics, and prepare films for different formats."
       },
       cap2: {
         title: "Exhibition Interactive Media",
-        copy: "Showroom media, glasses-free 3D screens, spatial walkthroughs, interactive displays and exhibition interactive software production, coordinated by Mars with key creative input."
+        copy: "I coordinate the production of exhibition interactive software and contribute to its core creative work. I also work on showroom media, glasses-free 3D screens, spatial walkthroughs and interactive displays."
       },
       cap3: {
         title: "3D Visuals & IP",
-        copy: "3D modeling, character visuals, basic rigging, 3D printing and motion-ready assets."
+        copy: "I create 3D models and character visuals, with experience in basic rigging, 3D printing and assets for animation."
       },
       cap4: {
         title: "AIGC Workflow",
-        copy: "Using Midjourney, Stable Diffusion and ChatGPT for concept exploration, scripts, storyboards and visual direction."
+        copy: "I use Midjourney, Stable Diffusion and ChatGPT to explore concepts, scripts, storyboards and visual directions."
       },
       cap5: {
         title: "Drone Aerial Filming",
-        copy: "CAAC drone license holder with six years of aerial filming experience for spaces, architecture, exhibitions and urban project footage."
+        copy: "I hold a CAAC drone license and have six years of experience filming spaces, architecture, exhibitions and urban projects from the air."
       },
       cap6: {
         title: "AI Modeling + 3D Print",
-        copy: "3D-printing enthusiast practicing AI modeling, model cleanup, slicing checks and the full workflow from digital form to printed object."
+        copy: "I enjoy 3D printing and exploring the process from AI-assisted modeling and model cleanup to slicing and printing."
       },
       contactLabel: "Contact",
       contactTitle: "Contact",
@@ -379,10 +379,10 @@ const uiCopy = {
       contactLocation: "Chengdu / Available for project travel",
       educationTime: "2014 - 2018 / Bachelor's Degree",
       educationTitle: "Chengdu College of UESTC / Film & Television Technology (Animation)",
-      educationCopy: "Graduated in 2018. Campus work covered the UESTC main campus 60th anniversary visuals, new-media interaction, AR pieces and 3D animation, with recognition including a Sichuan college art showcase prize and a university scholarship.",
+      educationCopy: "I graduated in 2018. During university, I contributed to visuals for the UESTC main campus's 60th anniversary and worked on new-media interaction, AR and 3D animation. My student achievements include a prize at a Sichuan college art showcase and a university scholarship.",
       caseLabel: "Case Archive",
       caseTitle: "UP Team CMI Case Archive",
-      caseCopy: "During university, Mars joined the UP Team CMI group at the UESTC Student Culture & Art Education Center. Selected new-media interaction and stage-visual cases are archived on the team's WeChat account.",
+      caseCopy: "During university, I was part of UP Team CMI at the UESTC Student Culture & Art Education Center. Some of the new-media interaction and stage-visual projects we worked on are collected on the team's WeChat account.",
       caseScan: "Scan to view early cases",
       caseQrAlt: "UP Team CMI WeChat QR code",
       toolsAria: "Software and tools",
