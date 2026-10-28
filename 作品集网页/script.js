@@ -1,5 +1,19 @@
 const categoryInfo = [
   {
+    id: "AIGC",
+    color: "#2b9c9a",
+    copy: {
+      zh: {
+        label: "AIGC",
+        summary: "AI辅助视觉创作与展览大屏影像。"
+      },
+      en: {
+        label: "AIGC",
+        summary: "AI-assisted visual work and exhibition screen films."
+      }
+    }
+  },
+  {
     id: "剪辑包装",
     color: "#c84d3f",
     copy: {
@@ -434,6 +448,16 @@ const uiCopy = {
 };
 
 const rawWorks = [
+  {
+    id: "aigc-masteel-hefei-screen",
+    title: "马钢合肥展裸眼大屏",
+    category: "AIGC",
+    src: "../作品选集_预览/AIGC/马钢合肥展裸眼大屏.mp4",
+    poster: "./assets/aigc-masteel-hefei-screen.jpg",
+    mediaFit: "contain",
+    note: "合肥展裸眼大屏影像与AI辅助视觉创作",
+    tags: ["AIGC", "马钢", "合肥展", "裸眼3D", "大屏"]
+  },
   {
     id: "clip-oylj-2024",
     title: "欧冶链金宣传片",
@@ -1269,6 +1293,10 @@ const workCopy = {
     }
   },
   en: {
+    "aigc-masteel-hefei-screen": {
+      title: "MaSteel Hefei Expo 3D Screen",
+      note: "AI-assisted visuals for a glasses-free 3D exhibition screen."
+    },
     "clip-oylj-2024": {
       title: "Ouyeel Chain Gold Promo Film",
       note: "Corporate brand film with industrial visual packaging."
@@ -1629,6 +1657,7 @@ const works = rawWorks.map((item) => ({
 const heroWorkId = "show-baosteel-silicon-hall";
 
 const featuredIds = [
+  "aigc-masteel-hefei-screen",
   heroWorkId,
   "clip-oylj-2024",
   "roam-shanghai-auto",
@@ -1943,6 +1972,8 @@ function createMediaShell(item) {
     video.loop = true;
     video.playsInline = true;
     video.preload = "metadata";
+    if (item.poster) video.poster = item.poster;
+    if (item.mediaFit) video.style.objectFit = item.mediaFit;
     applyVideoGuards(video);
     video.dataset.src = assetUrl(item.src);
     video.addEventListener("loadeddata", () => {

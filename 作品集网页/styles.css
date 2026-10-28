@@ -745,11 +745,6 @@ h3 {
   grid-row: span 2;
 }
 
-.feature-card:nth-child(4),
-.feature-card:nth-child(5) {
-  grid-column: span 6;
-}
-
 .feature-card::after,
 .work-card::after {
   content: "";
@@ -853,7 +848,7 @@ h3 {
 
 .category-strip {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(7, minmax(0, 1fr));
   gap: 1px;
   max-width: 1360px;
   margin: 0 auto;
@@ -1301,9 +1296,7 @@ h3 {
   }
 
   .feature-card,
-  .feature-card:first-child,
-  .feature-card:nth-child(4),
-  .feature-card:nth-child(5) {
+  .feature-card:first-child {
     grid-column: span 1;
     grid-row: span 1;
   }
